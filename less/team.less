@@ -1,20 +1,24 @@
 @import url(//fonts.googleapis.com/css?family=Press+Start+2P);
 @import "functions";
 
-.animation (@name, @time, @steps, @limit:infinite){
+.animation (@name, @time, @steps, @limit:infinite) {
   -webkit-animation: @name @time steps(@steps) @limit;
   -moz-animation: @name @time steps(@steps) @limit;
   -ms-animation: @name @time steps(@steps) @limit;
   -o-animation: @name @time steps(@steps) @limit;
   animation: @name @time steps(@steps) @limit;
 }
-.fromto (@from: 0, @to){
-  from { background-position: @from; }
-  to { background-position: @to; }
+.fromto (@from: 0, @to) {
+  from {
+    background-position: @from;
+  }
+  to {
+    background-position: @to;
+  }
 }
 .disabled {
   height: 0;
-  left: -2000px!important;
+  left: -2000px !important;
   width: 0;
 }
 .hover {
@@ -506,16 +510,16 @@
   width: 85px;
 }
 .char-pacman {
-  position:relative;
+  position: relative;
   height: 35px;
   width: 31px;
   .walk-pacman {
     height: 35px;
     width: 31px;
-    .animation (walking-pacman, .6s, 3);
+    .animation (walking-pacman, 0.6s, 3);
   }
   &.char-pacman10 {
-    &.active{
+    &.active {
       .animation (walking-path-pacman10, 1s, 16, 1);
       .walk-pacman {
         background-image: url("../images/team/scenes/sprites/pacman_10.png");
@@ -531,7 +535,7 @@
     }
   }
   &.char-pacman40 {
-    &.active{
+    &.active {
       .animation (walking-path-pacman40, 1s, 16, 1);
       .walk-pacman {
         background-image: url("../images/team/scenes/sprites/pacman_40.png");
@@ -539,7 +543,7 @@
     }
   }
   &.char-returning-pacman10 {
-    &.active{
+    &.active {
       .animation (returning-path-pacman10, 1s, 16, 1);
       .walk-pacman {
         background-image: url("../images/team/scenes/sprites/pacman_10.png");
@@ -555,7 +559,7 @@
     }
   }
   &.char-returning-pacman40 {
-    &.active{
+    &.active {
       .animation (returning-path-pacman40, 1s, 16, 1);
       .walk-pacman {
         background-image: url("../images/team/scenes/sprites/pacman_40.png");
@@ -564,14 +568,14 @@
   }
 }
 .char-ghost {
-  position:relative;
+  position: relative;
   height: 37px;
   left: -1000px;
   width: 27px;
   .walk-ghost {
     height: 37px;
     width: 27px;
-    .animation (walking-ghost, .4s, 2);
+    .animation (walking-ghost, 0.4s, 2);
   }
   &.char-ghost10 {
     &.active {
@@ -635,52 +639,124 @@
   .fromto (0, -54px);
 }
 @keyframes walking-path-pacman10 {
-  from { left: 1425px; top: 290px;}
-  to { left: 1635px; top: 420px; }
+  from {
+    left: 1425px;
+    top: 290px;
+  }
+  to {
+    left: 1635px;
+    top: 420px;
+  }
 }
 @-webkit-keyframes walking-path-pacman10 {
-  from { left: 1425px; top: 290px;}
-  to { left: 1635px; top: 420px; }
+  from {
+    left: 1425px;
+    top: 290px;
+  }
+  to {
+    left: 1635px;
+    top: 420px;
+  }
 }
 @keyframes walking-path-pacman20 {
-  from { left: 1635px; top: 420px;}
-  to { left: 1440px; top: 490px; }
+  from {
+    left: 1635px;
+    top: 420px;
+  }
+  to {
+    left: 1440px;
+    top: 490px;
+  }
 }
 @-webkit-keyframes walking-path-pacman20 {
-  from { left: 1635px; top: 420px;}
-  to { left: 1440px; top: 490px; }
+  from {
+    left: 1635px;
+    top: 420px;
+  }
+  to {
+    left: 1440px;
+    top: 490px;
+  }
 }
 @keyframes walking-path-pacman40 {
-  from { left: 1440px; top: 490px;}
-  to { left: 1095px; top: 260px; }
+  from {
+    left: 1440px;
+    top: 490px;
+  }
+  to {
+    left: 1095px;
+    top: 260px;
+  }
 }
 @-webkit-keyframes walking-path-pacman40 {
-  from { left: 1440px; top: 490px;}
-  to { left: 1095px; top: 260px; }
+  from {
+    left: 1440px;
+    top: 490px;
+  }
+  to {
+    left: 1095px;
+    top: 260px;
+  }
 }
 @keyframes returning-path-pacman40 {
-  from { left: 1635px; top: 420px; }
-  to { left: 1425px; top: 290px;}
+  from {
+    left: 1635px;
+    top: 420px;
+  }
+  to {
+    left: 1425px;
+    top: 290px;
+  }
 }
 @-webkit-keyframes returning-path-pacman40 {
-  from { left: 1635px; top: 420px; }
-  to { left: 1425px; top: 290px;}
+  from {
+    left: 1635px;
+    top: 420px;
+  }
+  to {
+    left: 1425px;
+    top: 290px;
+  }
 }
 @keyframes returning-path-pacman30 {
-  from { left: 1440px; top: 490px; }
-  to { left: 1635px; top: 420px;}
+  from {
+    left: 1440px;
+    top: 490px;
+  }
+  to {
+    left: 1635px;
+    top: 420px;
+  }
 }
 @-webkit-keyframes returning-path-pacman30 {
-  from { left: 1440px; top: 490px; }
-  to { left: 1635px; top: 420px;}
+  from {
+    left: 1440px;
+    top: 490px;
+  }
+  to {
+    left: 1635px;
+    top: 420px;
+  }
 }
 @keyframes returning-path-pacman10 {
-  from { left: 1095px; top: 260px; }
-  to { left: 1440px; top: 490px;}
+  from {
+    left: 1095px;
+    top: 260px;
+  }
+  to {
+    left: 1440px;
+    top: 490px;
+  }
 }
 @-webkit-keyframes returning-path-pacman10 {
-  from { left: 1095px; top: 260px; }
-  to { left: 1440px; top: 490px;}
+  from {
+    left: 1095px;
+    top: 260px;
+  }
+  to {
+    left: 1440px;
+    top: 490px;
+  }
 }
 
 //Clock
@@ -1057,7 +1133,7 @@
   &.active {
     .animation (walking-path-db1, 3s, 16, 1);
     .walk-db {
-      .animation (walking-db1, .8s, 4);
+      .animation (walking-db1, 0.8s, 4);
       background-image: url("../images/team/scenes/sprites/db_21.png");
       height: 147px;
       width: 73px;
@@ -1070,7 +1146,7 @@
   &.active {
     .animation (walking-path-db2, 1s, 6, 1);
     .walk-db {
-      .animation (walking-db1, .8s, 4);
+      .animation (walking-db1, 0.8s, 4);
       background-image: url("../images/team/scenes/sprites/db_23.png");
       height: 144px;
       width: 73px;
@@ -1091,7 +1167,7 @@
   &.active {
     .animation (walking-path-db4, 1s, 6, 1);
     .walk-db {
-      .animation (walking-db1, .8s, 4);
+      .animation (walking-db1, 0.8s, 4);
       background-image: url("../images/team/scenes/sprites/db_21.png");
       height: 147px;
       width: 73px;
@@ -1104,7 +1180,7 @@
   &.active {
     .animation (walking-path-db5, 3s, 16, 1);
     .walk-db {
-      .animation (walking-db1, .8s, 4);
+      .animation (walking-db1, 0.8s, 4);
       background-image: url("../images/team/scenes/sprites/db_23.png");
       height: 144px;
       width: 73px;
@@ -1142,20 +1218,44 @@
   .fromto (0, -292px);
 }
 @keyframes walking-path-db1 {
-  from { left: 400px; top: 840px;}
-  to { left: 700px; top: 700px; }
+  from {
+    left: 400px;
+    top: 840px;
+  }
+  to {
+    left: 700px;
+    top: 700px;
+  }
 }
 @-webkit-keyframes walking-path-db1 {
-  from { left: 400px; top: 840px;}
-  to { left: 700px; top: 700px; }
+  from {
+    left: 400px;
+    top: 840px;
+  }
+  to {
+    left: 700px;
+    top: 700px;
+  }
 }
 @keyframes walking-path-db2 {
-  from { left: 700px; top: 700px;}
-  to { left: 638px; top: 682px; }
+  from {
+    left: 700px;
+    top: 700px;
+  }
+  to {
+    left: 638px;
+    top: 682px;
+  }
 }
 @-webkit-keyframes walking-path-db2 {
-  from { left: 700px; top: 700px;}
-  to { left: 638px; top: 682px; }
+  from {
+    left: 700px;
+    top: 700px;
+  }
+  to {
+    left: 638px;
+    top: 682px;
+  }
 }
 @keyframes walking-path-db3 {
   .fromto (0, -2024px);
@@ -1164,20 +1264,44 @@
   .fromto (0, -2024px);
 }
 @keyframes walking-path-db4 {
-  from { left: 638px; top: 682px; }
-  to { left: 700px; top: 700px;}
+  from {
+    left: 638px;
+    top: 682px;
+  }
+  to {
+    left: 700px;
+    top: 700px;
+  }
 }
 @-webkit-keyframes walking-path-db4 {
-  from { left: 638px; top: 682px; }
-  to { left: 700px; top: 700px;}
+  from {
+    left: 638px;
+    top: 682px;
+  }
+  to {
+    left: 700px;
+    top: 700px;
+  }
 }
 @keyframes walking-path-db5 {
-  from { left: 700px; top: 700px; }
-  to { left: 400px; top: 840px;}
+  from {
+    left: 700px;
+    top: 700px;
+  }
+  to {
+    left: 400px;
+    top: 840px;
+  }
 }
 @-webkit-keyframes walking-path-db5 {
-  from { left: 700px; top: 700px; }
-  to { left: 400px; top: 840px;}
+  from {
+    left: 700px;
+    top: 700px;
+  }
+  to {
+    left: 400px;
+    top: 840px;
+  }
 }
 
 //CT
@@ -1335,7 +1459,7 @@
   &.active {
     .animation (walking-path-fs1, 1.4s, 16, 1);
     .walk-fs {
-      .animation (walking-fs1, .8s, 4);
+      .animation (walking-fs1, 0.8s, 4);
       background-image: url("../images/team/scenes/sprites/fs_21.png");
       height: 143px;
       width: 58px;
@@ -1348,7 +1472,7 @@
   &.active {
     .animation (walking-path-fs2, 1.6s, 16, 1);
     .walk-fs {
-      .animation (walking-fs1, .8s, 4);
+      .animation (walking-fs1, 0.8s, 4);
       background-image: url("../images/team/scenes/sprites/fs_21.png");
       height: 143px;
       width: 58px;
@@ -1361,7 +1485,7 @@
   &.active {
     .animation (walking-path-fs3, 1.8s, 16, 1);
     .walk-fs {
-      .animation (walking-fs1, .8s, 4);
+      .animation (walking-fs1, 0.8s, 4);
       background-image: url("../images/team/scenes/sprites/fs_21.png");
       height: 143px;
       width: 58px;
@@ -1374,7 +1498,7 @@
   &.active {
     .animation (walking-path-fs4, 2.4s, 16, 1);
     .walk-fs {
-      .animation (walking-fs1, .8s, 4);
+      .animation (walking-fs1, 0.8s, 4);
       background-image: url("../images/team/scenes/sprites/fs_26.png");
       height: 143px;
       width: 58px;
@@ -1387,7 +1511,7 @@
   &.active {
     .animation (walking-path-fs5, 1.2s, 16, 1);
     .walk-fs {
-      .animation (walking-fs1, .8s, 4);
+      .animation (walking-fs1, 0.8s, 4);
       background-image: url("../images/team/scenes/sprites/fs_21.png");
       height: 143px;
       width: 58px;
@@ -1400,7 +1524,7 @@
   &.active {
     .animation (walking-path-fs6, 1.8s, 16, 1);
     .walk-fs {
-      .animation (walking-fs2, .8s, 4);
+      .animation (walking-fs2, 0.8s, 4);
       background-image: url("../images/team/scenes/sprites/fs_27.png");
       height: 141px;
       width: 57px;
@@ -1413,7 +1537,7 @@
   &.active {
     .animation (walking-path-fs7, 2.4s, 16, 1);
     .walk-fs {
-      .animation (walking-fs2, .8s, 4);
+      .animation (walking-fs2, 0.8s, 4);
       background-image: url("../images/team/scenes/sprites/fs_22.png");
       height: 141px;
       width: 57px;
@@ -1426,7 +1550,7 @@
   &.active {
     .animation (walking-path-fs8, 1.8s, 16, 1);
     .walk-fs {
-      .animation (walking-fs2, .8s, 4);
+      .animation (walking-fs2, 0.8s, 4);
       background-image: url("../images/team/scenes/sprites/fs_27.png");
       height: 141px;
       width: 57px;
@@ -1439,7 +1563,7 @@
   &.active {
     .animation (walking-path-fs9, 1.6s, 16, 1);
     .walk-fs {
-      .animation (walking-fs2, .8s, 4);
+      .animation (walking-fs2, 0.8s, 4);
       background-image: url("../images/team/scenes/sprites/fs_27.png");
       height: 141px;
       width: 57px;
@@ -1452,7 +1576,7 @@
   &.active {
     .animation (walking-path-fs10, 1.4s, 16, 1);
     .walk-fs {
-      .animation (walking-fs2, .8s, 4);
+      .animation (walking-fs2, 0.8s, 4);
       background-image: url("../images/team/scenes/sprites/fs_22.png");
       height: 141px;
       width: 57px;
@@ -1559,44 +1683,104 @@
   .fromto (0, -228px);
 }
 @keyframes walking-path-fs1 {
-  from { left: 770px; top: 871px;}
-  to { left: 770px; top:760px; }
+  from {
+    left: 770px;
+    top: 871px;
+  }
+  to {
+    left: 770px;
+    top: 760px;
+  }
 }
 @-webkit-keyframes walking-path-fs1 {
-  from { left: 770px; top: 871px;}
-  to { left: 770px; top:760px; }
+  from {
+    left: 770px;
+    top: 871px;
+  }
+  to {
+    left: 770px;
+    top: 760px;
+  }
 }
 @keyframes walking-path-fs2 {
-  from { left: 770px; top:760px;}
-  to { left: 620px; top:660px; }
+  from {
+    left: 770px;
+    top: 760px;
+  }
+  to {
+    left: 620px;
+    top: 660px;
+  }
 }
 @-webkit-keyframes walking-path-fs2 {
-  from { left: 770px; top:760px;}
-  to { left: 620px; top:660px; }
+  from {
+    left: 770px;
+    top: 760px;
+  }
+  to {
+    left: 620px;
+    top: 660px;
+  }
 }
 @keyframes walking-path-fs3 {
-  from { left: 620px; top:660px;}
-  to { left: 450px; top:550px; }
+  from {
+    left: 620px;
+    top: 660px;
+  }
+  to {
+    left: 450px;
+    top: 550px;
+  }
 }
 @-webkit-keyframes walking-path-fs3 {
-  from { left: 620px; top:660px;}
-  to { left: 450px; top:550px; }
+  from {
+    left: 620px;
+    top: 660px;
+  }
+  to {
+    left: 450px;
+    top: 550px;
+  }
 }
 @keyframes walking-path-fs4 {
-  from { left: 450px; top:550px; }
-  to { left: 660px; top: 270px; }
+  from {
+    left: 450px;
+    top: 550px;
+  }
+  to {
+    left: 660px;
+    top: 270px;
+  }
 }
 @-webkit-keyframes walking-path-fs4 {
-  from { left: 450px; top:550px; }
-  to { left: 660px; top: 270px; }
+  from {
+    left: 450px;
+    top: 550px;
+  }
+  to {
+    left: 660px;
+    top: 270px;
+  }
 }
 @keyframes walking-path-fs5 {
-  from { left: 660px; top: 270px; }
-  to { left: 623px; top: 200px; }
+  from {
+    left: 660px;
+    top: 270px;
+  }
+  to {
+    left: 623px;
+    top: 200px;
+  }
 }
 @-webkit-keyframes walking-path-fs5 {
-  from { left: 660px; top: 270px; }
-  to { left: 623px; top: 200px; }
+  from {
+    left: 660px;
+    top: 270px;
+  }
+  to {
+    left: 623px;
+    top: 200px;
+  }
 }
 @keyframes fs-sittingmeeting {
   .fromto (0, -5600px);
@@ -1611,44 +1795,104 @@
   .fromto (0, -5301px);
 }
 @keyframes walking-path-fs6 {
-  from { left: 623px; top: 200px; }
-  to { left: 660px; top: 270px; }
+  from {
+    left: 623px;
+    top: 200px;
+  }
+  to {
+    left: 660px;
+    top: 270px;
+  }
 }
 @-webkit-keyframes walking-path-fs6 {
-  from { left: 623px; top: 200px; }
-  to { left: 660px; top: 270px; }
+  from {
+    left: 623px;
+    top: 200px;
+  }
+  to {
+    left: 660px;
+    top: 270px;
+  }
 }
 @keyframes walking-path-fs7 {
-  from { left: 660px; top: 270px; }
-  to { left: 450px; top:550px; }
+  from {
+    left: 660px;
+    top: 270px;
+  }
+  to {
+    left: 450px;
+    top: 550px;
+  }
 }
 @-webkit-keyframes walking-path-fs7 {
-  from { left: 660px; top: 270px; }
-  to { left: 450px; top:550px; }
+  from {
+    left: 660px;
+    top: 270px;
+  }
+  to {
+    left: 450px;
+    top: 550px;
+  }
 }
 @keyframes walking-path-fs8 {
-  from { left: 450px; top:550px; }
-  to { left: 620px; top:660px;}
+  from {
+    left: 450px;
+    top: 550px;
+  }
+  to {
+    left: 620px;
+    top: 660px;
+  }
 }
 @-webkit-keyframes walking-path-fs8 {
-  from { left: 450px; top:550px; }
-  to { left: 620px; top:660px;}
+  from {
+    left: 450px;
+    top: 550px;
+  }
+  to {
+    left: 620px;
+    top: 660px;
+  }
 }
 @keyframes walking-path-fs9 {
-  from { left: 620px; top:660px; }
-  to { left: 770px; top:760px;}
+  from {
+    left: 620px;
+    top: 660px;
+  }
+  to {
+    left: 770px;
+    top: 760px;
+  }
 }
 @-webkit-keyframes walking-path-fs9 {
-  from { left: 620px; top:660px; }
-  to { left: 770px; top:760px;}
+  from {
+    left: 620px;
+    top: 660px;
+  }
+  to {
+    left: 770px;
+    top: 760px;
+  }
 }
 @keyframes walking-path-fs10 {
-  from { left: 770px; top:760px; }
-  to{ left: 700px; top: 871px;}
+  from {
+    left: 770px;
+    top: 760px;
+  }
+  to {
+    left: 700px;
+    top: 871px;
+  }
 }
 @-webkit-keyframes walking-path-fs10 {
-  from { left: 770px; top:760px; }
-  to{ left: 700px; top: 871px;}
+  from {
+    left: 770px;
+    top: 760px;
+  }
+  to {
+    left: 700px;
+    top: 871px;
+  }
 }
 @keyframes fs_sitting {
   .fromto (0, -3660px);
@@ -1707,7 +1951,7 @@
   &.active {
     .animation (walking-path-ss1, 1.2s, 16, 1);
     .walk-ss {
-      .animation (walking-ss2, .8s, 4);
+      .animation (walking-ss2, 0.8s, 4);
       background-image: url("../images/team/scenes/sprites/ss_22.png");
       height: 135px;
       width: 54px;
@@ -1720,7 +1964,7 @@
   &.active {
     .animation (walking-path-ss2, 1.8s, 16, 1);
     .walk-ss {
-      .animation (walking-ss1, .8s, 4);
+      .animation (walking-ss1, 0.8s, 4);
       background-image: url("../images/team/scenes/sprites/ss_21.png");
       height: 133px;
       width: 52px;
@@ -1733,7 +1977,7 @@
   &.active {
     .animation (walking-path-ss3, 1.8s, 16, 1);
     .walk-ss {
-      .animation (walking-ss1, .8s, 4);
+      .animation (walking-ss1, 0.8s, 4);
       background-image: url("../images/team/scenes/sprites/ss_21.png");
       height: 133px;
       width: 52px;
@@ -1746,7 +1990,7 @@
   &.active {
     .animation (walking-path-ss4, 2.4s, 16, 1);
     .walk-ss {
-      .animation (walking-ss1, .8s, 4);
+      .animation (walking-ss1, 0.8s, 4);
       background-image: url("../images/team/scenes/sprites/ss_26.png");
       height: 133px;
       width: 52px;
@@ -1759,7 +2003,7 @@
   &.active {
     .animation (walking-path-ss5, 2.4s, 16, 1);
     .walk-ss {
-      .animation (walking-ss1, .8s, 4);
+      .animation (walking-ss1, 0.8s, 4);
       background-image: url("../images/team/scenes/sprites/ss_26.png");
       height: 133px;
       width: 52px;
@@ -1803,7 +2047,7 @@
   &.active {
     .animation (walking-path-ss6, 2.4s, 16, 1);
     .walk-ss {
-      .animation (walking-ss2, .8s, 4);
+      .animation (walking-ss2, 0.8s, 4);
       background-image: url("../images/team/scenes/sprites/ss_22.png");
       height: 135px;
       width: 54px;
@@ -1816,7 +2060,7 @@
   &.active {
     .animation (walking-path-ss7, 2.4s, 16, 1);
     .walk-ss {
-      .animation (walking-ss2, .8s, 4);
+      .animation (walking-ss2, 0.8s, 4);
       background-image: url("../images/team/scenes/sprites/ss_22.png");
       height: 135px;
       width: 54px;
@@ -1829,7 +2073,7 @@
   &.active {
     .animation (walking-path-ss8, 1.8s, 16, 1);
     .walk-ss {
-      .animation (walking-ss2, .8s, 4);
+      .animation (walking-ss2, 0.8s, 4);
       background-image: url("../images/team/scenes/sprites/ss_27.png");
       height: 135px;
       width: 54px;
@@ -1842,7 +2086,7 @@
   &.active {
     .animation (walking-path-ss9, 1.6s, 16, 1);
     .walk-ss {
-      .animation (walking-ss2, .8s, 4);
+      .animation (walking-ss2, 0.8s, 4);
       background-image: url("../images/team/scenes/sprites/ss_27.png");
       height: 135px;
       width: 54px;
@@ -1855,7 +2099,7 @@
   &.active {
     .animation (walking-path-ss10, 1.4s, 16, 1);
     .walk-ss {
-      .animation (walking-ss1, .8s, 4);
+      .animation (walking-ss1, 0.8s, 4);
       background-image: url("../images/team/scenes/sprites/ss_26.png");
       height: 133px;
       width: 52px;
@@ -1866,9 +2110,9 @@
   height: 133px;
   width: 52px;
   &.active {
-    .animation (walking-path-ss11, .8s, 16, 1);
+    .animation (walking-path-ss11, 0.8s, 16, 1);
     .walk-ss {
-      .animation (walking-ss1, .8s, 4);
+      .animation (walking-ss1, 0.8s, 4);
       background-image: url("../images/team/scenes/sprites/ss_21.png");
       height: 133px;
       width: 52px;
@@ -1935,44 +2179,104 @@
   .fromto (0, -216px);
 }
 @keyframes walking-path-ss1 {
-  from { left: 980px; top: 710px; }
-  to { left: 850px; top: 792px; }
+  from {
+    left: 980px;
+    top: 710px;
+  }
+  to {
+    left: 850px;
+    top: 792px;
+  }
 }
 @-webkit-keyframes walking-path-ss1 {
-  from { left: 980px; top: 710px; }
-  to { left: 850px; top: 792px; }
+  from {
+    left: 980px;
+    top: 710px;
+  }
+  to {
+    left: 850px;
+    top: 792px;
+  }
 }
 @keyframes walking-path-ss2 {
-  from { left: 850px; top: 792px; }
-  to { left: 620px; top:660px; }
+  from {
+    left: 850px;
+    top: 792px;
+  }
+  to {
+    left: 620px;
+    top: 660px;
+  }
 }
 @-webkit-keyframes walking-path-ss2 {
-  from { left: 850px; top: 792px; }
-  to { left: 620px; top:660px; }
+  from {
+    left: 850px;
+    top: 792px;
+  }
+  to {
+    left: 620px;
+    top: 660px;
+  }
 }
 @keyframes walking-path-ss3 {
-  from { left: 620px; top:660px;}
-  to { left: 450px; top:550px; }
+  from {
+    left: 620px;
+    top: 660px;
+  }
+  to {
+    left: 450px;
+    top: 550px;
+  }
 }
 @-webkit-keyframes walking-path-ss3 {
-  from { left: 620px; top:660px;}
-  to { left: 450px; top:550px; }
+  from {
+    left: 620px;
+    top: 660px;
+  }
+  to {
+    left: 450px;
+    top: 550px;
+  }
 }
 @keyframes walking-path-ss4 {
-  from { left: 450px; top:550px; }
-  to { left: 660px; top: 290px; }
+  from {
+    left: 450px;
+    top: 550px;
+  }
+  to {
+    left: 660px;
+    top: 290px;
+  }
 }
 @-webkit-keyframes walking-path-ss4 {
-  from { left: 450px; top:550px; }
-  to { left: 660px; top: 290px; }
+  from {
+    left: 450px;
+    top: 550px;
+  }
+  to {
+    left: 660px;
+    top: 290px;
+  }
 }
 @keyframes walking-path-ss5 {
-  from { left: 660px; top: 290px; }
-  to { left: 1000px; top: 160px; }
+  from {
+    left: 660px;
+    top: 290px;
+  }
+  to {
+    left: 1000px;
+    top: 160px;
+  }
 }
 @-webkit-keyframes walking-path-ss5 {
-  from { left: 660px; top: 290px; }
-  to { left: 1000px; top: 160px; }
+  from {
+    left: 660px;
+    top: 290px;
+  }
+  to {
+    left: 1000px;
+    top: 160px;
+  }
 }
 @keyframes ss-sittingmeeting {
   .fromto (0, -1560px);
@@ -1987,52 +2291,124 @@
   .fromto (0, -1566px);
 }
 @keyframes walking-path-ss6 {
-  from { left: 1000px; top: 160px; }
-  to { left: 660px; top: 290px; }
+  from {
+    left: 1000px;
+    top: 160px;
+  }
+  to {
+    left: 660px;
+    top: 290px;
+  }
 }
 @-webkit-keyframes walking-path-ss6 {
-  from { left: 1000px; top: 160px; }
-  to { left: 660px; top: 290px; }
+  from {
+    left: 1000px;
+    top: 160px;
+  }
+  to {
+    left: 660px;
+    top: 290px;
+  }
 }
 @keyframes walking-path-ss7 {
-  from { left: 660px; top: 290px; }
-  to { left: 450px; top:550px; }
+  from {
+    left: 660px;
+    top: 290px;
+  }
+  to {
+    left: 450px;
+    top: 550px;
+  }
 }
 @-webkit-keyframes walking-path-ss7 {
-  from { left: 660px; top: 290px; }
-  to { left: 450px; top:550px; }
+  from {
+    left: 660px;
+    top: 290px;
+  }
+  to {
+    left: 450px;
+    top: 550px;
+  }
 }
 @keyframes walking-path-ss8 {
-  from { left: 450px; top:550px; }
-  to { left: 620px; top:660px;}
+  from {
+    left: 450px;
+    top: 550px;
+  }
+  to {
+    left: 620px;
+    top: 660px;
+  }
 }
 @-webkit-keyframes walking-path-ss8 {
-  from { left: 450px; top:550px; }
-  to { left: 620px; top:660px;}
+  from {
+    left: 450px;
+    top: 550px;
+  }
+  to {
+    left: 620px;
+    top: 660px;
+  }
 }
 @keyframes walking-path-ss9 {
-  from { left: 620px; top:660px; }
-  to { left: 850px; top: 792px; }
+  from {
+    left: 620px;
+    top: 660px;
+  }
+  to {
+    left: 850px;
+    top: 792px;
+  }
 }
 @-webkit-keyframes walking-path-ss9 {
-  from { left: 620px; top:660px; }
-  to { left: 850px; top: 792px; }
+  from {
+    left: 620px;
+    top: 660px;
+  }
+  to {
+    left: 850px;
+    top: 792px;
+  }
 }
 @keyframes walking-path-ss10 {
-  from { left: 850px; top: 792px; }
-  to { left: 980px; top: 710px; }
+  from {
+    left: 850px;
+    top: 792px;
+  }
+  to {
+    left: 980px;
+    top: 710px;
+  }
 }
 @-webkit-keyframes walking-path-ss10 {
-  from { left: 850px; top: 792px; }
-  to { left: 980px; top: 710px; }
+  from {
+    left: 850px;
+    top: 792px;
+  }
+  to {
+    left: 980px;
+    top: 710px;
+  }
 }
 @keyframes walking-path-ss11 {
-  from { left: 980px; top: 710px; }
-  to { left: 900px; top: 700px; }
+  from {
+    left: 980px;
+    top: 710px;
+  }
+  to {
+    left: 900px;
+    top: 700px;
+  }
 }
 @-webkit-keyframes walking-path-ss11 {
-  from { left: 980px; top: 710px; }
-  to { left: 900px; top: 700px; }
+  from {
+    left: 980px;
+    top: 710px;
+  }
+  to {
+    left: 900px;
+    top: 700px;
+  }
 }
 @keyframes ss_sitting {
   .fromto (0, -2250px);
@@ -2068,7 +2444,7 @@
   &.active {
     .animation (walking-path-stamp, 1.2s, 16, 1);
     .walk-stamp {
-      .animation (walking-stamp, .3s, 6);
+      .animation (walking-stamp, 0.3s, 6);
       background-image: url("../images/team/scenes/sprites/ss_32.png");
       height: 14px;
       width: 13px;
@@ -2081,7 +2457,7 @@
   &.active {
     .animation (walking-path-stampback, 1.4s, 16, 1);
     .walk-stamp {
-      .animation (walking-stamp, .3s, 6);
+      .animation (walking-stamp, 0.3s, 6);
       background-image: url("../images/team/scenes/sprites/ss_32.png");
       height: 14px;
       width: 13px;
@@ -2095,20 +2471,44 @@
   .fromto (0, -78px);
 }
 @keyframes walking-path-stamp {
-  from { left: 639px; top: 853px; }
-  to { left: 815px; top: 678px; }
+  from {
+    left: 639px;
+    top: 853px;
+  }
+  to {
+    left: 815px;
+    top: 678px;
+  }
 }
 @-webkit-keyframes walking-path-stamp {
-  from { left: 639px; top: 853px; }
-  to { left: 815px; top: 678px; }
+  from {
+    left: 639px;
+    top: 853px;
+  }
+  to {
+    left: 815px;
+    top: 678px;
+  }
 }
 @keyframes walking-path-stampback {
-  from { left: 795px; top: 685px; }
-  to { left: 639px; top: 853px; }
+  from {
+    left: 795px;
+    top: 685px;
+  }
+  to {
+    left: 639px;
+    top: 853px;
+  }
 }
 @-webkit-keyframes walking-path-stampback {
-  from { left: 795px; top: 685px; }
-  to { left: 639px; top: 853px; }
+  from {
+    left: 795px;
+    top: 685px;
+  }
+  to {
+    left: 639px;
+    top: 853px;
+  }
 }
 
 //TD
@@ -2287,7 +2687,7 @@
   &.active {
     .animation (walking-path-mm1, 4s, 16, 1);
     .walk-mm {
-      .animation (walking-mm, .8s, 4);
+      .animation (walking-mm, 0.8s, 4);
       background-image: url("../images/team/scenes/sprites/mm_25.png");
       height: 151px;
       width: 58px;
@@ -2300,7 +2700,7 @@
   &.active {
     .animation (walking-path-mm2, 3.2s, 16, 1);
     .walk-mm {
-      .animation (walking-mm, .8s, 4);
+      .animation (walking-mm, 0.8s, 4);
       background-image: url("../images/team/scenes/sprites/mm_21.png");
       height: 151px;
       width: 58px;
@@ -2313,7 +2713,7 @@
   &.active {
     .animation (walking-path-mm3, 3.2s, 16, 1);
     .walk-mm {
-      .animation (walking-mm, .8s, 4);
+      .animation (walking-mm, 0.8s, 4);
       background-image: url("../images/team/scenes/sprites/mm_24.png");
       height: 151px;
       width: 58px;
@@ -2334,7 +2734,7 @@
   &.active {
     .animation (walking-path-mm4, 3.2s, 16, 1);
     .walk-mm {
-      .animation (walking-mm, .8s, 4);
+      .animation (walking-mm, 0.8s, 4);
       background-image: url("../images/team/scenes/sprites/mm_25.png");
       height: 151px;
       width: 58px;
@@ -2347,7 +2747,7 @@
   &.active {
     .animation (walking-path-mm5, 3.2s, 16, 1);
     .walk-mm {
-      .animation (walking-mm, .8s, 4);
+      .animation (walking-mm, 0.8s, 4);
       background-image: url("../images/team/scenes/sprites/mm_22.png");
       height: 151px;
       width: 58px;
@@ -2360,7 +2760,7 @@
   &.active {
     .animation (walking-path-mm6, 4s, 16, 1);
     .walk-mm {
-      .animation (walking-mm, .8s, 4);
+      .animation (walking-mm, 0.8s, 4);
       background-image: url("../images/team/scenes/sprites/mm_24.png");
       height: 151px;
       width: 58px;
@@ -2400,28 +2800,64 @@
   .fromto (0, -232px);
 }
 @keyframes walking-path-mm1 {
-  from { left: 735px; top: 330px }
-  to { left: 1120px; top: 505px }
+  from {
+    left: 735px;
+    top: 330px;
+  }
+  to {
+    left: 1120px;
+    top: 505px;
+  }
 }
 @-webkit-keyframes walking-path-mm1 {
-  from { left: 735px; top: 330px }
-  to { left: 1120px; top: 505px }
+  from {
+    left: 735px;
+    top: 330px;
+  }
+  to {
+    left: 1120px;
+    top: 505px;
+  }
 }
 @keyframes walking-path-mm2 {
-  from { left: 1120px; top: 505px }
-  to { left: 1365px; top: 350px }
+  from {
+    left: 1120px;
+    top: 505px;
+  }
+  to {
+    left: 1365px;
+    top: 350px;
+  }
 }
 @-webkit-keyframes walking-path-mm2 {
-  from { left: 1120px; top: 505px }
-  to { left: 1365px; top: 350px }
+  from {
+    left: 1120px;
+    top: 505px;
+  }
+  to {
+    left: 1365px;
+    top: 350px;
+  }
 }
 @keyframes walking-path-mm3 {
-  from { left: 1365px; top: 350px }
-  to { left: 1060px; top: 190px }
+  from {
+    left: 1365px;
+    top: 350px;
+  }
+  to {
+    left: 1060px;
+    top: 190px;
+  }
 }
 @-webkit-keyframes walking-path-mm3 {
-  from { left: 1365px; top: 350px }
-  to { left: 1060px; top: 190px }
+  from {
+    left: 1365px;
+    top: 350px;
+  }
+  to {
+    left: 1060px;
+    top: 190px;
+  }
 }
 @keyframes mm-talking {
   .fromto (0, -1160px);
@@ -2430,28 +2866,64 @@
   .fromto (0, -1160px);
 }
 @keyframes walking-path-mm4 {
-  from { left: 1060px; top: 190px }
-  to { left: 1365px; top: 350px }
+  from {
+    left: 1060px;
+    top: 190px;
+  }
+  to {
+    left: 1365px;
+    top: 350px;
+  }
 }
 @-webkit-keyframes walking-path-mm4 {
-  from { left: 1060px; top: 190px }
-  to { left: 1365px; top: 350px }
+  from {
+    left: 1060px;
+    top: 190px;
+  }
+  to {
+    left: 1365px;
+    top: 350px;
+  }
 }
 @keyframes walking-path-mm5 {
-  from { left: 1365px; top: 350px }
-  to { left: 1120px; top: 505px }
+  from {
+    left: 1365px;
+    top: 350px;
+  }
+  to {
+    left: 1120px;
+    top: 505px;
+  }
 }
 @-webkit-keyframes walking-path-mm5 {
-  from { left: 1365px; top: 350px }
-  to { left: 1120px; top: 505px }
+  from {
+    left: 1365px;
+    top: 350px;
+  }
+  to {
+    left: 1120px;
+    top: 505px;
+  }
 }
 @keyframes walking-path-mm6 {
-  from { left: 1120px; top: 505px }
-  to { left: 735px; top: 330px }
+  from {
+    left: 1120px;
+    top: 505px;
+  }
+  to {
+    left: 735px;
+    top: 330px;
+  }
 }
 @-webkit-keyframes walking-path-mm6 {
-  from { left: 1120px; top: 505px }
-  to { left: 735px; top: 330px }
+  from {
+    left: 1120px;
+    top: 505px;
+  }
+  to {
+    left: 735px;
+    top: 330px;
+  }
 }
 @keyframes mm-sitdown {
   .fromto (0, -3015px);
@@ -2571,9 +3043,9 @@
   height: 11px;
   width: 10px;
   &.active {
-    .animation (walking-path-paperball, .6s, 16, 1);
+    .animation (walking-path-paperball, 0.6s, 16, 1);
     .walk-paperball {
-      .animation (walking-paperball, .6s, 3);
+      .animation (walking-paperball, 0.6s, 3);
       background-image: url("../images/team/scenes/sprites/mh_90.png");
       height: 11px;
       width: 10px;
@@ -2605,12 +3077,24 @@
   .fromto (0, -30px);
 }
 @keyframes walking-path-paperball {
-  from { left: 525px; top: 530px }
-  to { left: 545px; top: 500px; }
+  from {
+    left: 525px;
+    top: 530px;
+  }
+  to {
+    left: 545px;
+    top: 500px;
+  }
 }
 @-webkit-keyframes walking-path-paperball {
-  from { left: 525px; top: 530px }
-  to { left: 545px; top: 500px; }
+  from {
+    left: 525px;
+    top: 530px;
+  }
+  to {
+    left: 545px;
+    top: 500px;
+  }
 }
 @keyframes mh-basket {
   .fromto (-22px, -176px);
@@ -2672,7 +3156,7 @@
   &.active {
     .animation (walking-path-mha1, 1.8s, 16, 1);
     .walk-mha {
-      .animation (walking-mha1, .8s, 4);
+      .animation (walking-mha1, 0.8s, 4);
       background-image: url("../images/team/scenes/sprites/mha_21.png");
       height: 132px;
       width: 54px;
@@ -2685,7 +3169,7 @@
   &.active {
     .animation (walking-path-mha2, 3.2s, 16, 1);
     .walk-mha {
-      .animation (walking-mha2, .8s, 4);
+      .animation (walking-mha2, 0.8s, 4);
       background-image: url("../images/team/scenes/sprites/mha_22.png");
       height: 126px;
       width: 48px;
@@ -2698,7 +3182,7 @@
   height: 151px;
   left: 975px;
   top: 652px;
-  width: 114px
+  width: 114px;
 }
 .char-mha4 {
   height: 132px;
@@ -2706,7 +3190,7 @@
   &.active {
     .animation (walking-path-mha4, 3.2s, 16, 1);
     .walk-mha {
-      .animation (walking-mha1, .8s, 4);
+      .animation (walking-mha1, 0.8s, 4);
       background-image: url("../images/team/scenes/sprites/mha_24.png");
       height: 132px;
       width: 54px;
@@ -2719,7 +3203,7 @@
   &.active {
     .animation (walking-path-mha5, 1.2s, 16, 1);
     .walk-mha {
-      .animation (walking-mha2, .8s, 4);
+      .animation (walking-mha2, 0.8s, 4);
       background-image: url("../images/team/scenes/sprites/mha_25.png");
       height: 126px;
       width: 48px;
@@ -2757,20 +3241,44 @@
   .fromto (0, -192px);
 }
 @keyframes walking-path-mha1 {
-  from { left: 490px; top: 795px; }
-  to { left: 590px; top: 840px; }
+  from {
+    left: 490px;
+    top: 795px;
+  }
+  to {
+    left: 590px;
+    top: 840px;
+  }
 }
 @-webkit-keyframes walking-path-mha1 {
-  from { left: 490px; top: 795px; }
-  to { left: 590px; top: 840px; }
+  from {
+    left: 490px;
+    top: 795px;
+  }
+  to {
+    left: 590px;
+    top: 840px;
+  }
 }
 @keyframes walking-path-mha2 {
-  from { left: 590px; top: 840px; }
-  to { left: 990px; top: 685px; }
+  from {
+    left: 590px;
+    top: 840px;
+  }
+  to {
+    left: 990px;
+    top: 685px;
+  }
 }
 @-webkit-keyframes walking-path-mha2 {
-  from { left: 590px; top: 840px; }
-  to { left: 990px; top: 685px; }
+  from {
+    left: 590px;
+    top: 840px;
+  }
+  to {
+    left: 990px;
+    top: 685px;
+  }
 }
 @keyframes mha3 {
   .fromto (0, -2736px);
@@ -2779,25 +3287,49 @@
   .fromto (0, -2736px);
 }
 @keyframes walking-path-mha4 {
-  from { left: 970px; top: 680px; }
-  to { left: 590px; top: 840px; }
+  from {
+    left: 970px;
+    top: 680px;
+  }
+  to {
+    left: 590px;
+    top: 840px;
+  }
 }
 @-webkit-keyframes walking-path-mha4 {
-  from { left: 970px; top: 680px; }
-  to { left: 590px; top: 840px; }
+  from {
+    left: 970px;
+    top: 680px;
+  }
+  to {
+    left: 590px;
+    top: 840px;
+  }
 }
 @keyframes walking-path-mha5 {
-  from { left: 590px; top: 840px; }
-  to { left: 520px; top: 810px; }
+  from {
+    left: 590px;
+    top: 840px;
+  }
+  to {
+    left: 520px;
+    top: 810px;
+  }
 }
 @-webkit-keyframes walking-path-mha5 {
-  from { left: 590px; top: 840px; }
-  to { left: 520px; top: 810px; }
+  from {
+    left: 590px;
+    top: 840px;
+  }
+  to {
+    left: 520px;
+    top: 810px;
+  }
 }
 @keyframes mha_sitdown {
   .fromto (0, -3632px);
 }
-@-webkit-keyframes mha_sitdown{
+@-webkit-keyframes mha_sitdown {
   .fromto (0, -3632px);
 }
 
@@ -2842,12 +3374,24 @@
   .fromto (0, -102px);
 }
 @keyframes walking-path-paperplane {
-  from { left: 945px; top: 680px }
-  to { left: 1165px; top: 490px }
+  from {
+    left: 945px;
+    top: 680px;
+  }
+  to {
+    left: 1165px;
+    top: 490px;
+  }
 }
 @-webkit-keyframes walking-path-paperplane {
-  from { left: 945px; top: 680px }
-  to { left: 1165px; top: 490px }
+  from {
+    left: 945px;
+    top: 680px;
+  }
+  to {
+    left: 1165px;
+    top: 490px;
+  }
 }
 @keyframes papers {
   .fromto (0, -1596px);
@@ -2921,7 +3465,7 @@
   height: 3px;
   width: 5px;
   &.active {
-    .animation (walking-path-shot, .5s, 16, 1);
+    .animation (walking-path-shot, 0.5s, 16, 1);
     .walk-shot {
       background-image: url("../images/team/scenes/sprites/mk_99.png");
       height: 3px;
@@ -2960,12 +3504,24 @@
   .fromto (0, -2030px);
 }*/
 @keyframes walking-path-shot {
-  from { left: 865px; top: 508px;}
-  to { left: 665px; top: 445px; }
+  from {
+    left: 865px;
+    top: 508px;
+  }
+  to {
+    left: 665px;
+    top: 445px;
+  }
 }
 @-webkit-keyframes walking-path-shot {
-  from { left: 865px; top: 508px;}
-  to { left: 665px; top: 445px; }
+  from {
+    left: 865px;
+    top: 508px;
+  }
+  to {
+    left: 665px;
+    top: 445px;
+  }
 }
 
 //MJ
@@ -3178,7 +3734,7 @@
   &.active {
     .animation (walking-path-ak, 1.2s, 16, 1);
     .walk-ak-1 {
-      .animation (walking-ak1, .8s, 4);
+      .animation (walking-ak1, 0.8s, 4);
       background-image: url("../images/team/scenes/sprites/ak_21.png");
       height: 144px;
       width: 53px;
@@ -3191,7 +3747,7 @@
   &.active {
     .animation (walking-path-ak1, 1.8s, 16, 1);
     .walk-ak-1 {
-      .animation (walking-ak1, .8s, 4);
+      .animation (walking-ak1, 0.8s, 4);
       background-image: url("../images/team/scenes/sprites/ak_24.png");
       height: 144px;
       width: 53px;
@@ -3212,7 +3768,7 @@
   &.active {
     .animation (walking-path-ak2, 1.8s, 16, 1);
     .walk-ak-2 {
-      .animation (walking-ak2, .8s, 4);
+      .animation (walking-ak2, 0.8s, 4);
       background-image: url("../images/team/scenes/sprites/ak_25.png");
       height: 147px;
       width: 57px;
@@ -3225,7 +3781,7 @@
   &.active {
     .animation (walking-path-ak3, 1.2s, 16, 1);
     .walk-ak-2 {
-      .animation (walking-ak2, .8s, 4);
+      .animation (walking-ak2, 0.8s, 4);
       background-image: url("../images/team/scenes/sprites/ak_22.png");
       height: 147px;
       width: 57px;
@@ -3271,20 +3827,44 @@
   .fromto (0, -228px);
 }
 @keyframes walking-path-ak {
-  from { left: 1004px; top: 500px; }
-  to { left: 1050px; top: 480px; }
+  from {
+    left: 1004px;
+    top: 500px;
+  }
+  to {
+    left: 1050px;
+    top: 480px;
+  }
 }
 @-webkit-keyframes walking-path-ak {
-  from { left: 1004px; top: 500px; }
-  to { left: 1050px; top: 480px; }
+  from {
+    left: 1004px;
+    top: 500px;
+  }
+  to {
+    left: 1050px;
+    top: 480px;
+  }
 }
 @keyframes walking-path-ak1 {
-  from { left: 1050px; top: 480px; }
-  to { left: 840px; top: 400px; }
+  from {
+    left: 1050px;
+    top: 480px;
+  }
+  to {
+    left: 840px;
+    top: 400px;
+  }
 }
 @-webkit-keyframes walking-path-ak1 {
-  from { left: 1050px; top: 480px; }
-  to { left: 840px; top: 400px; }
+  from {
+    left: 1050px;
+    top: 480px;
+  }
+  to {
+    left: 840px;
+    top: 400px;
+  }
 }
 @keyframes ak_talking {
   .fromto (0, -1612px);
@@ -3293,20 +3873,44 @@
   .fromto (0, -1612px);
 }
 @keyframes walking-path-ak2 {
-  from { left: 840px; top: 400px; }
-  to { left: 1050px; top: 480px; }
+  from {
+    left: 840px;
+    top: 400px;
+  }
+  to {
+    left: 1050px;
+    top: 480px;
+  }
 }
 @-webkit-keyframes walking-path-ak2 {
-  from { left: 840px; top: 400px; }
-  to { left: 1050px; top: 480px; }
+  from {
+    left: 840px;
+    top: 400px;
+  }
+  to {
+    left: 1050px;
+    top: 480px;
+  }
 }
 @keyframes walking-path-ak3 {
-  from { left: 1050px; top: 480px; }
-  to { left: 1004px; top: 500px; }
+  from {
+    left: 1050px;
+    top: 480px;
+  }
+  to {
+    left: 1004px;
+    top: 500px;
+  }
 }
 @-webkit-keyframes walking-path-ak3 {
-  from { left: 1050px; top: 480px; }
-  to { left: 1004px; top: 500px; }
+  from {
+    left: 1050px;
+    top: 480px;
+  }
+  to {
+    left: 1004px;
+    top: 500px;
+  }
 }
 @keyframes ak_sidown {
   .fromto (0, -4335px);
@@ -3319,13 +3923,10 @@
   color: white;
   display: none;
   font-size: 12px;
-  font-family: 'Press Start 2P', cursive;
+  font-family: "Press Start 2P", cursive;
   line-height: 16px;
   position: absolute;
-  text-shadow:
-    -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;
   width: 600px;
   &.visible {
@@ -3346,7 +3947,7 @@
   color: white;
   display: none;
   font-size: 12px;
-  font-family: 'Press Start 2P', cursive;
+  font-family: "Press Start 2P", cursive;
   line-height: 16px;
   position: absolute;
   top: 50px;
@@ -3355,10 +3956,7 @@
   border-radius: 10px;
   margin: 0;
   padding: 20px;
-  text-shadow:
-    -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;
   &.active {
     display: block;
@@ -3385,7 +3983,7 @@
 }
 
 .brackets {
-  font-size: .8em;
+  font-size: 0.8em;
   &:before {
     content: "(";
   }
@@ -3413,8 +4011,8 @@
       padding: 5px 10px 0;
       text-align: center;
       img {
-        opacity: .4;
-        .transition (all, .3s, ease);
+        opacity: 0.4;
+        .transition (all, 0.3s, ease);
       }
       span {
         display: block;
@@ -3490,6 +4088,7 @@
         }
       }
       &#video-container {
+        overflow: hidden;
         max-height: 580px;
         .embed-responsive {
           height: 100%;
@@ -3555,7 +4154,7 @@
       li {
         display: inline-block;
         margin: 10px 10px 0;
-        .transition (opacity, .1s, ease-in);
+        .transition (opacity, 0.1s, ease-in);
         img {
           &.real {
             display: block;
@@ -3565,7 +4164,7 @@
           }
         }
         &.deactivated {
-          opacity: .2;
+          opacity: 0.2;
         }
         .name {
           display: block;
@@ -3580,13 +4179,13 @@
         .links {
           visibility: hidden;
           a {
-            .at2x ("../images/social/team-icons.png", 500%, 300%);
+            .at2x ("../images/social/team-icons.png", 500%, 300%);;
             background-repeat: no-repeat;
             color: transparent;
             display: inline-block;
             font-size: 0;
             line-height: 40px;
-            opacity: .7;
+            opacity: 0.7;
             &.facebook {
               .spritesizer (0, 0, 30px, 30px);
             }
@@ -3658,148 +4257,142 @@
     }
   }
   @media (max-width: (@breakpointHD - 1px)) {
-
   }
   @media (max-width: @breakpointMenu) {
-
   }
   @media (max-width: (@ipadPort - 1px)) {
-
   }
 }
 
 #floor_thumb_a.active:after {
-  display:none;
-  content:
-  url("../images/team/scenes/sprites/ct_00.png")
-  url("../images/team/scenes/sprites/ct_10.png")
-  url("../images/team/scenes/sprites/ct_20.png")
-  url("../images/team/scenes/sprites/el_10.png")
-  url("../images/team/scenes/sprites/fs_10.png")
-  url("../images/team/scenes/sprites/fs_20.png")
-  url("../images/team/scenes/sprites/fs_21.png")
-  url("../images/team/scenes/sprites/fs_22.png")
-  url("../images/team/scenes/sprites/fs_23.png")
-  url("../images/team/scenes/sprites/fs_24.png")
-  url("../images/team/scenes/sprites/fs_25.png")
-  url("../images/team/scenes/sprites/fs_26.png")
-  url("../images/team/scenes/sprites/fs_27.png")
-  url("../images/team/scenes/sprites/fs_28.png")
-  url("../images/team/scenes/sprites/fs_29.png")
-  url("../images/team/scenes/sprites/fs_29b.png")
-  url("../images/team/scenes/sprites/fs_29c.png")
-  url("../images/team/scenes/sprites/fs_30.png")
-  url("../images/team/scenes/sprites/fs_31.png")
-  url("../images/team/scenes/sprites/ss_10.png")
-  url("../images/team/scenes/sprites/ss_20.png")
-  url("../images/team/scenes/sprites/ss_21.png")
-  url("../images/team/scenes/sprites/ss_22.png")
-  url("../images/team/scenes/sprites/ss_23.png")
-  url("../images/team/scenes/sprites/ss_24.png")
-  url("../images/team/scenes/sprites/ss_25.png")
-  url("../images/team/scenes/sprites/ss_26.png")
-  url("../images/team/scenes/sprites/ss_27.png")
-  url("../images/team/scenes/sprites/ss_28.png")
-  url("../images/team/scenes/sprites/ss_29.png")
-  url("../images/team/scenes/sprites/ss_30.png")
-  url("../images/team/scenes/sprites/ss_31.png")
-  url("../images/team/scenes/sprites/ss_32.png");
+  display: none;
+  content: url("../images/team/scenes/sprites/ct_00.png")
+    url("../images/team/scenes/sprites/ct_10.png")
+    url("../images/team/scenes/sprites/ct_20.png")
+    url("../images/team/scenes/sprites/el_10.png")
+    url("../images/team/scenes/sprites/fs_10.png")
+    url("../images/team/scenes/sprites/fs_20.png")
+    url("../images/team/scenes/sprites/fs_21.png")
+    url("../images/team/scenes/sprites/fs_22.png")
+    url("../images/team/scenes/sprites/fs_23.png")
+    url("../images/team/scenes/sprites/fs_24.png")
+    url("../images/team/scenes/sprites/fs_25.png")
+    url("../images/team/scenes/sprites/fs_26.png")
+    url("../images/team/scenes/sprites/fs_27.png")
+    url("../images/team/scenes/sprites/fs_28.png")
+    url("../images/team/scenes/sprites/fs_29.png")
+    url("../images/team/scenes/sprites/fs_29b.png")
+    url("../images/team/scenes/sprites/fs_29c.png")
+    url("../images/team/scenes/sprites/fs_30.png")
+    url("../images/team/scenes/sprites/fs_31.png")
+    url("../images/team/scenes/sprites/ss_10.png")
+    url("../images/team/scenes/sprites/ss_20.png")
+    url("../images/team/scenes/sprites/ss_21.png")
+    url("../images/team/scenes/sprites/ss_22.png")
+    url("../images/team/scenes/sprites/ss_23.png")
+    url("../images/team/scenes/sprites/ss_24.png")
+    url("../images/team/scenes/sprites/ss_25.png")
+    url("../images/team/scenes/sprites/ss_26.png")
+    url("../images/team/scenes/sprites/ss_27.png")
+    url("../images/team/scenes/sprites/ss_28.png")
+    url("../images/team/scenes/sprites/ss_29.png")
+    url("../images/team/scenes/sprites/ss_30.png")
+    url("../images/team/scenes/sprites/ss_31.png")
+    url("../images/team/scenes/sprites/ss_32.png");
 }
 #floor_thumb_b.active:after {
-  display:none;
-  content:
-  url("../images/team/scenes/sprites/bg_00.png")
-  url("../images/team/scenes/sprites/bg_10.png")
-  url("../images/team/scenes/sprites/bg_20.png")
-  url("../images/team/scenes/sprites/db_00.png")
-  url("../images/team/scenes/sprites/db_10.png")
-  url("../images/team/scenes/sprites/db_20.png")
-  url("../images/team/scenes/sprites/db_21.png")
-  url("../images/team/scenes/sprites/db_22.png")
-  url("../images/team/scenes/sprites/db_23.png")
-  url("../images/team/scenes/sprites/mm_00.png")
-  url("../images/team/scenes/sprites/mm_10.png")
-  url("../images/team/scenes/sprites/mm_20.png")
-  url("../images/team/scenes/sprites/mm_21.png")
-  url("../images/team/scenes/sprites/mm_22.png")
-  url("../images/team/scenes/sprites/mm_23.png")
-  url("../images/team/scenes/sprites/mm_24.png")
-  url("../images/team/scenes/sprites/mm_25.png")
-  url("../images/team/scenes/sprites/mm_26.png")
-  url("../images/team/scenes/sprites/mm_29.png")
-  url("../images/team/scenes/sprites/np_00.png")
-  url("../images/team/scenes/sprites/np_10.png")
-  url("../images/team/scenes/sprites/np_20.png")
-  url("../images/team/scenes/sprites/mh_00.png")
-  url("../images/team/scenes/sprites/mh_10.png")
-  url("../images/team/scenes/sprites/mh_20.png")
-  url("../images/team/scenes/sprites/mh_90.png")
-  url("../images/team/scenes/sprites/mh_91.png")
-  url("../images/team/scenes/sprites/mk_00.png")
-  url("../images/team/scenes/sprites/mk_10.png")
-  url("../images/team/scenes/sprites/mk_20.png")
-  url("../images/team/scenes/sprites/mj_00.png")
-  url("../images/team/scenes/sprites/mj_10.png")
-  url("../images/team/scenes/sprites/mj_20.png")
-  url("../images/team/scenes/sprites/mr_00.png")
-  url("../images/team/scenes/sprites/mr_10.png")
-  url("../images/team/scenes/sprites/mr_20.png")
-  url("../images/team/scenes/sprites/sa_00.png")
-  url("../images/team/scenes/sprites/sa_10.png")
-  url("../images/team/scenes/sprites/jo_00.png")
-  url("../images/team/scenes/sprites/jo_10.png")
-  url("../images/team/scenes/sprites/ak_00.png")
-  url("../images/team/scenes/sprites/ak_10.png")
-  url("../images/team/scenes/sprites/ak_20.png")
-  url("../images/team/scenes/sprites/ak_21.png")
-  url("../images/team/scenes/sprites/ak_22.png")
-  url("../images/team/scenes/sprites/ak_23.png")
-  url("../images/team/scenes/sprites/ak_24.png")
-  url("../images/team/scenes/sprites/ak_25.png")
-  url("../images/team/scenes/sprites/ak_26.png")
-  url("../images/team/scenes/sprites/ak_29.png")
-  url("../images/team/scenes/sprites/td_10.png")
-  url("../images/team/scenes/sprites/td_15.png")
-  url("../images/team/scenes/sprites/td_20.png")
-  url("../images/team/scenes/sprites/PaperPlane_25.png")
-  url("../images/team/scenes/sprites/PaperPlane_25b.png")
-  url("../images/team/scenes/sprites/PaperPlane_25c.png");
+  display: none;
+  content: url("../images/team/scenes/sprites/bg_00.png")
+    url("../images/team/scenes/sprites/bg_10.png")
+    url("../images/team/scenes/sprites/bg_20.png")
+    url("../images/team/scenes/sprites/db_00.png")
+    url("../images/team/scenes/sprites/db_10.png")
+    url("../images/team/scenes/sprites/db_20.png")
+    url("../images/team/scenes/sprites/db_21.png")
+    url("../images/team/scenes/sprites/db_22.png")
+    url("../images/team/scenes/sprites/db_23.png")
+    url("../images/team/scenes/sprites/mm_00.png")
+    url("../images/team/scenes/sprites/mm_10.png")
+    url("../images/team/scenes/sprites/mm_20.png")
+    url("../images/team/scenes/sprites/mm_21.png")
+    url("../images/team/scenes/sprites/mm_22.png")
+    url("../images/team/scenes/sprites/mm_23.png")
+    url("../images/team/scenes/sprites/mm_24.png")
+    url("../images/team/scenes/sprites/mm_25.png")
+    url("../images/team/scenes/sprites/mm_26.png")
+    url("../images/team/scenes/sprites/mm_29.png")
+    url("../images/team/scenes/sprites/np_00.png")
+    url("../images/team/scenes/sprites/np_10.png")
+    url("../images/team/scenes/sprites/np_20.png")
+    url("../images/team/scenes/sprites/mh_00.png")
+    url("../images/team/scenes/sprites/mh_10.png")
+    url("../images/team/scenes/sprites/mh_20.png")
+    url("../images/team/scenes/sprites/mh_90.png")
+    url("../images/team/scenes/sprites/mh_91.png")
+    url("../images/team/scenes/sprites/mk_00.png")
+    url("../images/team/scenes/sprites/mk_10.png")
+    url("../images/team/scenes/sprites/mk_20.png")
+    url("../images/team/scenes/sprites/mj_00.png")
+    url("../images/team/scenes/sprites/mj_10.png")
+    url("../images/team/scenes/sprites/mj_20.png")
+    url("../images/team/scenes/sprites/mr_00.png")
+    url("../images/team/scenes/sprites/mr_10.png")
+    url("../images/team/scenes/sprites/mr_20.png")
+    url("../images/team/scenes/sprites/sa_00.png")
+    url("../images/team/scenes/sprites/sa_10.png")
+    url("../images/team/scenes/sprites/jo_00.png")
+    url("../images/team/scenes/sprites/jo_10.png")
+    url("../images/team/scenes/sprites/ak_00.png")
+    url("../images/team/scenes/sprites/ak_10.png")
+    url("../images/team/scenes/sprites/ak_20.png")
+    url("../images/team/scenes/sprites/ak_21.png")
+    url("../images/team/scenes/sprites/ak_22.png")
+    url("../images/team/scenes/sprites/ak_23.png")
+    url("../images/team/scenes/sprites/ak_24.png")
+    url("../images/team/scenes/sprites/ak_25.png")
+    url("../images/team/scenes/sprites/ak_26.png")
+    url("../images/team/scenes/sprites/ak_29.png")
+    url("../images/team/scenes/sprites/td_10.png")
+    url("../images/team/scenes/sprites/td_15.png")
+    url("../images/team/scenes/sprites/td_20.png")
+    url("../images/team/scenes/sprites/PaperPlane_25.png")
+    url("../images/team/scenes/sprites/PaperPlane_25b.png")
+    url("../images/team/scenes/sprites/PaperPlane_25c.png");
 }
 #floor_thumb_c.active:after {
-  display:none;
-  content:
-  url("../images/team/scenes/sprites/mha_00.png")
-  url("../images/team/scenes/sprites/mha_10.png")
-  url("../images/team/scenes/sprites/mha_20.png")
-  url("../images/team/scenes/sprites/mha_21.png")
-  url("../images/team/scenes/sprites/mha_22.png")
-  url("../images/team/scenes/sprites/mha_23.png")
-  url("../images/team/scenes/sprites/mha_24.png")
-  url("../images/team/scenes/sprites/mha_25.png")
-  url("../images/team/scenes/sprites/mha_26.png")
-  url("../images/team/scenes/sprites/mha_27.png")
-  url("../images/team/scenes/sprites/mha_28.png")
-  url("../images/team/scenes/sprites/mha_29.png")
-  url("../images/team/scenes/datacenter/01_Trockenbau.png")
-  url("../images/team/scenes/datacenter/02_Trockenbau.png")
-  url("../images/team/scenes/datacenter/03_Racks.png")
-  url("../images/team/scenes/datacenter/04_Racks.png")
-  url("../images/team/scenes/datacenter/05_Racks.png")
-  url("../images/team/scenes/datacenter/06_Trockenbau.png")
-  url("../images/team/scenes/datacenter/07_Racks.png")
-  url("../images/team/scenes/datacenter/08_Trockenbau.png")
-  url("../images/team/scenes/datacenter/09_Racks.png")
-  url("../images/team/scenes/datacenter/10_Racks.png")
-  url("../images/team/scenes/datacenter/11_Racks.png")
-  url("../images/team/scenes/datacenter_dark/01_Trockenbau_d.png")
-  url("../images/team/scenes/datacenter_dark/02_Trockenbau_d.png")
-  url("../images/team/scenes/datacenter_dark/03_Racks_d.png")
-  url("../images/team/scenes/datacenter_dark/04_Racks_d.png")
-  url("../images/team/scenes/datacenter_dark/05_Racks_d.png")
-  url("../images/team/scenes/datacenter_dark/06_Trockenbau_d.png")
-  url("../images/team/scenes/datacenter_dark/07_Racks_d.png")
-  url("../images/team/scenes/datacenter_dark/08_Trockenbau_d.png")
-  url("../images/team/scenes/datacenter_dark/09_Racks_d.png")
-  url("../images/team/scenes/datacenter_dark/10_Racks_d.png")
-  url("../images/team/scenes/datacenter_dark/11_Racks_d.png");
+  display: none;
+  content: url("../images/team/scenes/sprites/mha_00.png")
+    url("../images/team/scenes/sprites/mha_10.png")
+    url("../images/team/scenes/sprites/mha_20.png")
+    url("../images/team/scenes/sprites/mha_21.png")
+    url("../images/team/scenes/sprites/mha_22.png")
+    url("../images/team/scenes/sprites/mha_23.png")
+    url("../images/team/scenes/sprites/mha_24.png")
+    url("../images/team/scenes/sprites/mha_25.png")
+    url("../images/team/scenes/sprites/mha_26.png")
+    url("../images/team/scenes/sprites/mha_27.png")
+    url("../images/team/scenes/sprites/mha_28.png")
+    url("../images/team/scenes/sprites/mha_29.png")
+    url("../images/team/scenes/datacenter/01_Trockenbau.png")
+    url("../images/team/scenes/datacenter/02_Trockenbau.png")
+    url("../images/team/scenes/datacenter/03_Racks.png")
+    url("../images/team/scenes/datacenter/04_Racks.png")
+    url("../images/team/scenes/datacenter/05_Racks.png")
+    url("../images/team/scenes/datacenter/06_Trockenbau.png")
+    url("../images/team/scenes/datacenter/07_Racks.png")
+    url("../images/team/scenes/datacenter/08_Trockenbau.png")
+    url("../images/team/scenes/datacenter/09_Racks.png")
+    url("../images/team/scenes/datacenter/10_Racks.png")
+    url("../images/team/scenes/datacenter/11_Racks.png")
+    url("../images/team/scenes/datacenter_dark/01_Trockenbau_d.png")
+    url("../images/team/scenes/datacenter_dark/02_Trockenbau_d.png")
+    url("../images/team/scenes/datacenter_dark/03_Racks_d.png")
+    url("../images/team/scenes/datacenter_dark/04_Racks_d.png")
+    url("../images/team/scenes/datacenter_dark/05_Racks_d.png")
+    url("../images/team/scenes/datacenter_dark/06_Trockenbau_d.png")
+    url("../images/team/scenes/datacenter_dark/07_Racks_d.png")
+    url("../images/team/scenes/datacenter_dark/08_Trockenbau_d.png")
+    url("../images/team/scenes/datacenter_dark/09_Racks_d.png")
+    url("../images/team/scenes/datacenter_dark/10_Racks_d.png")
+    url("../images/team/scenes/datacenter_dark/11_Racks_d.png");
 }
