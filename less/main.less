@@ -1,0 +1,197 @@
+html,
+body {
+  border-top: 2px solid #81bad7;
+  color: #044379 !important;
+  font-family: 'Open Sans',sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  height: 100%;
+  line-height: 24px;
+  outline: none;
+  width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 10px 0;
+  font-family: inherit;
+  font-weight: bold;
+  line-height: 20px;
+  color: inherit;
+  text-rendering: optimizelegibility;
+}
+h1 {
+  font-size: 25px;
+  line-height: 30px;
+}
+
+.switch-checkbox {
+  color: #aaa;
+  input[type=checkbox] {
+    position: absolute;
+    opacity: 0;
+    + div {
+      background-color: #ccc;
+      border: 1px solid rgba(0,0,0,.4);
+      border-radius: 999px;
+      box-shadow: inset 0 0 0 0px rgba(0,0,0,0.4);
+      display: inline-block;
+      height: 20px;
+      margin: 15px 5px 15px 0;
+      -webkit-transition-duration: .4s;
+      -webkit-transition-property: background-color, box-shadow;
+      vertical-align: middle;
+      width: 40px;
+      > div {
+        float: left;
+        width: 16px; height: 16px;
+        border-radius: inherit;
+        background: #ffffff;
+        -webkit-transition-timing-function: cubic-bezier(.54,1.85,.5,1);
+        -webkit-transition-duration: 0.4s;
+        -webkit-transition-property: transform, background-color, box-shadow;
+        -moz-transition-timing-function: cubic-bezier(.54,1.85,.5,1);
+        -moz-transition-duration: 0.4s;
+        -moz-transition-property: transform, background-color;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3), 0px 0px 0 1px rgba(0, 0, 0, 0.4);
+        pointer-events: none;
+        margin-top: 1px;
+        margin-left: 1px;
+      }
+    }
+    &:checked + div {
+      background-color: #00E359;
+      background-position: 0 0;
+      border: 1px solid #00A23F;
+      box-shadow: inset 0 0 0 10px #00E359;
+      width: 40px;
+      > div {
+        -webkit-transform: translate3d(20px, 0, 0);
+        -moz-transform: translate3d(20px, 0, 0);
+        background-color: #ffffff;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3), 0 0 0 1px #00A23F;
+      }
+    }
+    &[disabled] {
+      + div {
+        opacity: .5;
+        &:hover {
+          cursor: default;
+        }
+      }
+      &:hover {
+        cursor: default;
+      }
+    }
+  }
+  &.small{
+    color:#888;
+    input[type=checkbox] {
+      + div {
+        width:30px;
+        height: 15px;
+        margin:15px 5px 17px 5px;
+        > div {
+          width:11px;
+          height:11px;
+        }
+      }
+      &:checked + div{
+        > div{
+          -webkit-transform: translate3d(15px, 0, 0);
+          -moz-transform: translate3d(15px, 0, 0);
+        }
+      }
+    }
+  }
+  &.disabled {
+    opacity: .5;
+    &:hover {
+      cursor: default;
+    }
+  }
+}
+
+.margin0 { margin: 0!important }
+.margin5 { margin: 5px!important }
+.margin10 { margin: 10px!important }
+.margin15 { margin: 15px!important }
+.margin20 { margin: 20px!important }
+.margin25 { margin: 25px!important }
+.margin30 { margin: 30px!important }
+.bottom0 { margin-bottom: 0!important }
+.bottom5 { margin-bottom: 5px!important }
+.bottom10 { margin-bottom: 10px!important }
+.bottom15 { margin-bottom: 15px!important }
+.bottom30 { margin-bottom: 30px!important }
+.bottom45 { margin-bottom: 45px!important }
+.bottom60 { margin-bottom: 60px!important }
+.top0 { margin-top: 0!important }
+.top5 { margin-top: 5px!important }
+.top10 { margin-top: 10px!important }
+.top15 { margin-top: 15px!important }
+.top30 { margin-top: 30px!important }
+.top45 { margin-top: 45px!important }
+.top60 { margin-top: 60px!important }
+.left0 { margin-left: 0!important }
+.left5 { margin-left: 5px!important }
+.left10 { margin-left: 10px!important }
+.left15 { margin-left: 15px!important }
+.left20 { margin-left: 20px!important }
+.left25 { margin-left: 25px!important }
+.left30 { margin-left: 30px!important }
+.right0 { margin-right: 0!important }
+.right5 { margin-right: 5px!important }
+.right10 { margin-right: 10px!important }
+.right15 { margin-right: 15px!important }
+.right20 { margin-right: 20px!important }
+.right25 { margin-right: 25px!important }
+.right30 { margin-right: 30px!important }
+
+.pad0 { padding: 0!important }
+.pad5 { padding: 5px!important }
+.pad10 { padding: 10px!important }
+.pad15 { padding: 15px!important }
+.pad20 { padding: 20px!important }
+.pad25 { padding: 25px!important }
+.pad30 { padding: 30px!important }
+.padbottom0 { padding-bottom: 0!important }
+.padbottom5 { padding-bottom: 5px!important }
+.padbottom10 { padding-bottom: 10px!important }
+.padbottom15 { padding-bottom: 15px!important }
+.padbottom30 { padding-bottom: 30px!important }
+.padbottom45 { padding-bottom: 45px!important }
+.padbottom60 { padding-bottom: 60px!important }
+.padtop0 { padding-top: 0!important }
+.padtop5 { padding-top: 5px!important }
+.padtop10 { padding-top: 10px!important }
+.padtop15 { padding-top: 15px!important }
+.padtop30 { padding-top: 30px!important }
+.padtop45 { padding-top: 45px!important }
+.padtop60 { padding-top: 60px!important }
+.padleft0 { padding-left: 0!important }
+.padleft5 { padding-left: 5px!important }
+.padleft10 { padding-left: 10px!important }
+.padleft15 { padding-left: 15px!important }
+.padleft20 { padding-left: 20px!important }
+.padleft25 { padding-left: 25px!important }
+.padleft30 { padding-left: 30px!important }
+.padright0 { padding-right: 0!important }
+.padright5 { padding-right: 5px!important }
+.padright10 { padding-right: 10px!important }
+.padright15 { padding-right: 15px!important }
+.padright20 { padding-right: 20px!important }
+.padright25 { padding-right: 25px!important }
+.padright30 { padding-right: 30px!important }
+
+.inline { display: inline!important }
+.inlineblock { display: inline-block!important }
+.block { display: block!important }
+.hideblock { display: none!important }
+.pull-none { float: none!important }
+.text-bold { font-weight: bold }
+.text-italic { font-style: italic }
+.text-uppercase { text-transform: uppercase }
+.vertical-bottom { vertical-align: bottom!important }
+.vertical-middle { vertical-align: middle!important }
+.vertical-top { vertical-align: top!important }
+.fullwidth { width: 100%!important }

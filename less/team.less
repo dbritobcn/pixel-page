@@ -1,0 +1,3805 @@
+@import url(//fonts.googleapis.com/css?family=Press+Start+2P);
+@import "functions";
+
+.animation (@name, @time, @steps, @limit:infinite){
+  -webkit-animation: @name @time steps(@steps) @limit;
+  -moz-animation: @name @time steps(@steps) @limit;
+  -ms-animation: @name @time steps(@steps) @limit;
+  -o-animation: @name @time steps(@steps) @limit;
+  animation: @name @time steps(@steps) @limit;
+}
+.fromto (@from: 0, @to){
+  from { background-position: @from; }
+  to { background-position: @to; }
+}
+.disabled {
+  height: 0;
+  left: -2000px!important;
+  width: 0;
+}
+.hover {
+  cursor: url("../images/team/pixel-pointer.png"), auto;
+  position: relative;
+  &.indicator {
+    &:after {
+      .animation (hoverindicator, 1s, 10);
+      background-image: url("../images/team/indicator.png");
+      content: "";
+      height: 16px;
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      width: 16px;
+      z-index: 20;
+    }
+  }
+}
+@keyframes hoverindicator {
+  .fromto (0, -160px);
+}
+@-webkit-keyframes hoverindicator {
+  .fromto (0, -160px);
+}
+
+.ae_desk {
+  background-image: url("../images/team/scenes/sprites/ae_desk.png");
+  height: 186px;
+  left: 917px;
+  top: 751px;
+  width: 175px;
+}
+.archive {
+  background-image: url("../images/team/scenes/sprites/gizmo_01.png");
+  height: 60px;
+  left: 565px;
+  top: 770px;
+  width: 41px;
+  &.active {
+    .animation (archive, 3.4s, 17, 1);
+  }
+}
+.archive-catcher {
+  height: 60px;
+  left: 550px;
+  top: 755px;
+  width: 41px;
+}
+@keyframes archive {
+  .fromto (0, -697px);
+}
+@-webkit-keyframes archive {
+  .fromto (0, -697px);
+}
+.chair1,
+.chair2 {
+  background-image: url("../images/team/scenes/sprites/gizmo_04.png");
+  height: 113px;
+  width: 87px;
+  &.active {
+    .animation (chair, 3.8s, 19, 1);
+  }
+}
+.chair1 {
+  left: 936px;
+  top: 306px;
+}
+.chair2 {
+  left: 1097px;
+  top: 386px;
+}
+.chair1-catcher {
+  height: 70px;
+  left: 936px;
+  top: 306px;
+  width: 80px;
+}
+.chair2-catcher {
+  height: 70px;
+  left: 1097px;
+  top: 386px;
+  width: 80px;
+}
+@keyframes chair {
+  .fromto (0, -1653px);
+}
+@-webkit-keyframes chair {
+  .fromto (0, -1653px);
+}
+.ops_tables {
+  background-image: url("../images/team/scenes/sprites/ops_tischgruppe.png");
+  height: 244px;
+  left: 995px;
+  top: 248px;
+  width: 473px;
+}
+.ops_tables_2 {
+  background-image: url("../images/team/scenes/sprites/ops_tischgruppe_2.png");
+  height: 244px;
+  left: 995px;
+  top: 248px;
+  width: 473px;
+}
+.dev_wall {
+  background-image: url("../images/team/scenes/sprites/element_wall4.png");
+  height: 270px;
+  left: 279px;
+  top: 593px;
+  width: 408px;
+}
+.dev_tables {
+  background-image: url("../images/team/scenes/sprites/dev_tischgruppe.png");
+  height: 199px;
+  left: 265px;
+  top: 752px;
+  width: 226px;
+}
+.devplant {
+  background-image: url("../images/team/scenes/sprites/gizmo_02.png");
+  height: 64px;
+  left: 20px;
+  top: 795px;
+  width: 74px;
+  &.active {
+    .animation (devplant, 6.2s, 31, 1);
+  }
+}
+.devplant-catcher {
+  height: 64px;
+  left: 5px;
+  top: 780px;
+  width: 74px;
+}
+@keyframes devplant {
+  .fromto (0, -2294px);
+}
+@-webkit-keyframes devplant {
+  .fromto (0, -2294px);
+}
+.element_wall1 {
+  background-image: url("../images/team/scenes/sprites/element_wall1.png");
+  height: 275px;
+  left: 838px;
+  top: 313px;
+  width: 408px;
+}
+.element_wall3 {
+  background-image: url("../images/team/scenes/sprites/element_wall3.png");
+  height: 278px;
+  left: 599px;
+  top: 539px;
+  width: 420px;
+}
+.empfangsdame {
+  background-image: url("../images/team/scenes/sprites/empfangsdame_00.png");
+  height: 266px;
+  left: 251px;
+  top: 475px;
+  width: 150px;
+}
+#frontalwall {
+  background-image: url("../images/team/scenes/sprites/frontalwall.png");
+  height: 354px;
+  top: 735px;
+  width: 764px;
+}
+.gremlin01,
+.gremlin02 {
+  height: 35px;
+  width: 28px;
+  &.active {
+    .animation (gremlin, 4.6s, 25, 1);
+  }
+}
+.gremlin01 {
+  background-image: url("../images/team/scenes/sprites/gremlin01.png");
+  left: 1540px;
+  top: 167px;
+}
+.gremlin02 {
+  background-image: url("../images/team/scenes/sprites/gremlin02.png");
+  left: 1395px;
+  top: 35px;
+}
+.gremlin01-catcher,
+.gremlin02-catcher {
+  height: 35px;
+  width: 28px;
+}
+.gremlin01-catcher {
+  left: 1525px;
+  top: 150px;
+}
+.gremlin02-catcher {
+  left: 1380px;
+  top: 20px;
+}
+@keyframes gremlin {
+  .fromto (0, -700px);
+}
+@-webkit-keyframes gremlin {
+  .fromto (0, -700px);
+}
+.kitchen_fridge {
+  background-image: url("../images/team/scenes/sprites/kitchen_fridge.png");
+  height: 167px;
+  left: 844px;
+  top: 550px;
+  width: 90px;
+}
+.kitchen_sink {
+  background-image: url("../images/team/scenes/sprites/kitchen_sink.png");
+  height: 127px;
+  left: 688px;
+  top: 668px;
+  width: 144px;
+}
+.main-garbage {
+  background-image: url("../images/team/scenes/sprites/gizmo_05.png");
+  height: 49px;
+  left: 680px;
+  top: 800px;
+  width: 31px;
+  &.active {
+    .animation (main-garbage, 1.6s, 8, 1);
+  }
+}
+.main-garbage-catcher {
+  height: 49px;
+  left: 665px;
+  top: 785px;
+  width: 31px;
+}
+@keyframes main-garbage {
+  .fromto (0, -248px);
+}
+@-webkit-keyframes main-garbage {
+  .fromto (0, -248px);
+}
+.management_Cupboard {
+  background-image: url("../images/team/scenes/sprites/management_Cupboard.png");
+  height: 175px;
+  left: 253px;
+  top: 762px;
+  width: 206px;
+}
+.MeetingRoom_Chairs {
+  background-image: url("../images/team/scenes/sprites/MeetingRoom_Chairs.png");
+  height: 123px;
+  left: 820px;
+  top: 225px;
+  width: 125px;
+}
+.trockenbau_01 {
+  background-image: url("../images/team/scenes/sprites/trockenbau_01.png");
+  height: 384px;
+  left: 187px;
+  top: 814px;
+  width: 1375px;
+}
+.trockenbau_02 {
+  background-image: url("../images/team/scenes/sprites/trockenbau_02.png");
+  height: 425px;
+  top: 519px;
+  width: 563px;
+}
+.trockenbau_03 {
+  background-image: url("../images/team/scenes/sprites/trockenbau_03.png");
+  height: 568px;
+  left: 579px;
+  top: 445px;
+  width: 880px;
+}
+.trockenbau_05 {
+  background-image: url("../images/team/scenes/sprites/trockenbau_05.png");
+  height: 590px;
+  left: 656px;
+  top: 222px;
+  width: 885px;
+}
+.dark_room.active {
+  background-image: url("../images/team/scenes/datacenter_dark/12_Floor_d.png");
+  height: 1075px;
+  left: 0;
+  top: 0;
+  width: 1911px;
+}
+#floorc.dark {
+  background-color: #000;
+}
+.dc_trockenbau_01 {
+  background-image: url("../images/team/scenes/datacenter/01_Trockenbau.png");
+  height: 372px;
+  top: 703px;
+  width: 1102px;
+  &.dark {
+    background-image: url("../images/team/scenes/datacenter_dark/01_Trockenbau_d.png");
+  }
+}
+.dc_trockenbau_02 {
+  background-image: url("../images/team/scenes/datacenter/02_Trockenbau.png");
+  height: 1075px;
+  left: 0;
+  top: 0;
+  width: 1911px;
+  &.dark {
+    background-image: url("../images/team/scenes/datacenter_dark/02_Trockenbau_d.png");
+  }
+}
+.dc_racks_03 {
+  background-image: url("../images/team/scenes/datacenter/03_Racks.png");
+  height: 1075px;
+  left: 0;
+  top: 0;
+  width: 1911px;
+  &.dark {
+    background-image: url("../images/team/scenes/datacenter_dark/03_Racks_d.png");
+  }
+}
+.dc_racks_04 {
+  background-image: url("../images/team/scenes/datacenter/04_Racks.png");
+  height: 1075px;
+  left: 0;
+  top: 0;
+  width: 1911px;
+  &.dark {
+    background-image: url("../images/team/scenes/datacenter_dark/04_Racks_d.png");
+  }
+}
+.dc_racks_05 {
+  background-image: url("../images/team/scenes/datacenter/05_Racks.png");
+  height: 1075px;
+  left: 0;
+  top: 0;
+  width: 1911px;
+  &.dark {
+    background-image: url("../images/team/scenes/datacenter_dark/05_Racks_d.png");
+  }
+}
+.dc_trockenbau_06 {
+  background-image: url("../images/team/scenes/datacenter/06_Trockenbau.png");
+  height: 1075px;
+  left: 0;
+  top: 0;
+  width: 1911px;
+  &.dark {
+    background-image: url("../images/team/scenes/datacenter_dark/06_Trockenbau_d.png");
+  }
+}
+.dc_racks_07 {
+  background-image: url("../images/team/scenes/datacenter/07_Racks.png");
+  height: 1075px;
+  left: 0;
+  top: 0;
+  width: 1911px;
+  &.dark {
+    background-image: url("../images/team/scenes/datacenter_dark/07_Racks_d.png");
+  }
+}
+.dc_trockenbau_08 {
+  background-image: url("../images/team/scenes/datacenter/08_Trockenbau.png");
+  height: 1075px;
+  left: 0;
+  top: 0;
+  width: 1911px;
+  &.dark {
+    background-image: url("../images/team/scenes/datacenter_dark/08_Trockenbau_d.png");
+  }
+}
+.dc_racks_09 {
+  background-image: url("../images/team/scenes/datacenter/09_Racks.png");
+  height: 1075px;
+  left: 0;
+  top: 0;
+  width: 1911px;
+  &.dark {
+    background-image: url("../images/team/scenes/datacenter_dark/09_Racks_d.png");
+  }
+}
+.dc_racks_10 {
+  background-image: url("../images/team/scenes/datacenter/10_Racks.png");
+  height: 1075px;
+  left: 0;
+  top: 0;
+  width: 1911px;
+  &.dark {
+    background-image: url("../images/team/scenes/datacenter_dark/10_Racks_d.png");
+  }
+}
+.dc_racks_11 {
+  background-image: url("../images/team/scenes/datacenter/11_Racks.png");
+  height: 1075px;
+  left: 0;
+  top: 0;
+  width: 1911px;
+  &.dark {
+    background-image: url("../images/team/scenes/datacenter_dark/11_Racks_d.png");
+  }
+}
+
+//BBQ
+.bbq {
+  .animation (bbq, 2s, 10);
+  background-image: url("../images/team/scenes/sprites/bbq.png");
+  height: 110px;
+  left: 1165px;
+  top: 595px;
+  width: 102px;
+}
+@keyframes bbq {
+  .fromto (0, -1020px);
+}
+@-webkit-keyframes bbq {
+  .fromto (0, -1020px);
+}
+.bbq_meet {
+  .animation (bbq_meet, 2s, 10);
+  background-image: url("../images/team/scenes/sprites/bbq_meet.png");
+  height: 50px;
+  left: 1187px;
+  top: 571px;
+  width: 28px;
+  &.jump {
+    .animation (bbq_meet_jump, 2.2s, 11);
+    background-image: url("../images/team/scenes/sprites/bbq_meet_jump.png");
+  }
+}
+.bbq_meetcatcher {
+  height: 50px;
+  left: 1172px;
+  top: 556px;
+  width: 28px;
+}
+.bbq_meet_2catcher {
+  height: 50px;
+  left: 1195px;
+  top: 565px;
+  width: 28px;
+}
+.bbq_meet_2 {
+  .animation (bbq_meet, 2s, 10);
+  background-image: url("../images/team/scenes/sprites/bbq_meet.png");
+  height: 50px;
+  left: 1210px;
+  top: 580px;
+  width: 28px;
+  &.jump {
+    .animation (bbq_meet_jump, 2.2s, 11);
+    background-image: url("../images/team/scenes/sprites/bbq_meet_jump.png");
+  }
+}
+@keyframes bbq_meet {
+  .fromto (0, -280px);
+}
+@-webkit-keyframes bbq_meet {
+  .fromto (0, -280px);
+}
+@keyframes bbq_meet_jump {
+  .fromto (0, -308px);
+}
+@-webkit-keyframes bbq_meet_jump {
+  .fromto (0, -308px);
+}
+
+//Cactus
+.cactus {
+  background-image: url("../images/team/scenes/sprites/cactus.png");
+  height: 58px;
+  left: 1110px;
+  top: 185px;
+  width: 31px;
+  &.active {
+    .animation (cactus, 3.8s, 19, 1);
+  }
+}
+@keyframes cactus {
+  .fromto (0, -589px);
+}
+@-webkit-keyframes cactus {
+  .fromto (0, -589px);
+}
+
+//Pacman
+.pacman-catcher {
+  height: 90px;
+  left: 1505px;
+  top: 335px;
+  width: 85px;
+}
+.char-pacman {
+  position:relative;
+  height: 35px;
+  width: 31px;
+  .walk-pacman {
+    height: 35px;
+    width: 31px;
+    .animation (walking-pacman, .6s, 3);
+  }
+  &.char-pacman10 {
+    &.active{
+      .animation (walking-path-pacman10, 1s, 16, 1);
+      .walk-pacman {
+        background-image: url("../images/team/scenes/sprites/pacman_10.png");
+      }
+    }
+  }
+  &.char-pacman20 {
+    &.active {
+      .animation (walking-path-pacman20, 1s, 16, 1);
+      .walk-pacman {
+        background-image: url("../images/team/scenes/sprites/pacman_20.png");
+      }
+    }
+  }
+  &.char-pacman40 {
+    &.active{
+      .animation (walking-path-pacman40, 1s, 16, 1);
+      .walk-pacman {
+        background-image: url("../images/team/scenes/sprites/pacman_40.png");
+      }
+    }
+  }
+  &.char-returning-pacman10 {
+    &.active{
+      .animation (returning-path-pacman10, 1s, 16, 1);
+      .walk-pacman {
+        background-image: url("../images/team/scenes/sprites/pacman_10.png");
+      }
+    }
+  }
+  &.char-returning-pacman30 {
+    &.active {
+      .animation (returning-path-pacman30, 1s, 16, 1);
+      .walk-pacman {
+        background-image: url("../images/team/scenes/sprites/pacman_30.png");
+      }
+    }
+  }
+  &.char-returning-pacman40 {
+    &.active{
+      .animation (returning-path-pacman40, 1s, 16, 1);
+      .walk-pacman {
+        background-image: url("../images/team/scenes/sprites/pacman_40.png");
+      }
+    }
+  }
+}
+.char-ghost {
+  position:relative;
+  height: 37px;
+  left: -1000px;
+  width: 27px;
+  .walk-ghost {
+    height: 37px;
+    width: 27px;
+    .animation (walking-ghost, .4s, 2);
+  }
+  &.char-ghost10 {
+    &.active {
+      .animation (walking-path-pacman10, 1.4s, 16, 1);
+      .walk-ghost {
+        background-image: url("../images/team/scenes/sprites/ghost_10.png");
+      }
+    }
+  }
+  &.char-ghost20 {
+    &.active {
+      .animation (walking-path-pacman20, 1s, 16, 1);
+      .walk-ghost {
+        background-image: url("../images/team/scenes/sprites/ghost_20.png");
+      }
+    }
+  }
+  &.char-ghost40 {
+    &.active {
+      .animation (walking-path-pacman40, 1s, 16, 1);
+      .walk-ghost {
+        background-image: url("../images/team/scenes/sprites/ghost_40.png");
+      }
+    }
+  }
+  &.char-returning-ghost10 {
+    &.active {
+      .animation (returning-path-pacman10, 1s, 16, 1);
+      .walk-ghost {
+        background-image: url("../images/team/scenes/sprites/ghost2_10.png");
+      }
+    }
+  }
+  &.char-returning-ghost30 {
+    &.active {
+      .animation (returning-path-pacman30, 1s, 16, 1);
+      .walk-ghost {
+        background-image: url("../images/team/scenes/sprites/ghost2_30.png");
+      }
+    }
+  }
+  &.char-returning-ghost40 {
+    &.active {
+      .animation (returning-path-pacman40, 1s, 16, 1);
+      .walk-ghost {
+        background-image: url("../images/team/scenes/sprites/ghost2_40.png");
+      }
+    }
+  }
+}
+@keyframes walking-pacman {
+  .fromto (0, -93px);
+}
+@-webkit-keyframes walking-pacman {
+  .fromto (0, -93px);
+}
+@keyframes walking-ghost {
+  .fromto (0, -54px);
+}
+@-webkit-keyframes walking-ghost {
+  .fromto (0, -54px);
+}
+@keyframes walking-path-pacman10 {
+  from { left: 1425px; top: 290px;}
+  to { left: 1635px; top: 420px; }
+}
+@-webkit-keyframes walking-path-pacman10 {
+  from { left: 1425px; top: 290px;}
+  to { left: 1635px; top: 420px; }
+}
+@keyframes walking-path-pacman20 {
+  from { left: 1635px; top: 420px;}
+  to { left: 1440px; top: 490px; }
+}
+@-webkit-keyframes walking-path-pacman20 {
+  from { left: 1635px; top: 420px;}
+  to { left: 1440px; top: 490px; }
+}
+@keyframes walking-path-pacman40 {
+  from { left: 1440px; top: 490px;}
+  to { left: 1095px; top: 260px; }
+}
+@-webkit-keyframes walking-path-pacman40 {
+  from { left: 1440px; top: 490px;}
+  to { left: 1095px; top: 260px; }
+}
+@keyframes returning-path-pacman40 {
+  from { left: 1635px; top: 420px; }
+  to { left: 1425px; top: 290px;}
+}
+@-webkit-keyframes returning-path-pacman40 {
+  from { left: 1635px; top: 420px; }
+  to { left: 1425px; top: 290px;}
+}
+@keyframes returning-path-pacman30 {
+  from { left: 1440px; top: 490px; }
+  to { left: 1635px; top: 420px;}
+}
+@-webkit-keyframes returning-path-pacman30 {
+  from { left: 1440px; top: 490px; }
+  to { left: 1635px; top: 420px;}
+}
+@keyframes returning-path-pacman10 {
+  from { left: 1095px; top: 260px; }
+  to { left: 1440px; top: 490px;}
+}
+@-webkit-keyframes returning-path-pacman10 {
+  from { left: 1095px; top: 260px; }
+  to { left: 1440px; top: 490px;}
+}
+
+//Clock
+.clock {
+  .animation (clock, 12s, 30);
+  background-image: url("../images/team/scenes/sprites/clock.png");
+  height: 27px;
+  left: 1220px;
+  top: 105px;
+  width: 24px;
+}
+.clock2 {
+  .animation (clock, 12s, 30);
+  background-image: url("../images/team/scenes/sprites/clock.png");
+  height: 27px;
+  left: 730px;
+  top: 610px;
+  width: 24px;
+}
+.clock3 {
+  .animation (clock, 12s, 30);
+  background-image: url("../images/team/scenes/sprites/clock.png");
+  height: 27px;
+  left: 1645px;
+  top: 205px;
+  width: 24px;
+}
+@keyframes clock {
+  .fromto (0, -720px);
+}
+@-webkit-keyframes clock {
+  .fromto (0, -720px);
+}
+
+//DC Lights
+.dc_environment {
+  .animation (dc_env, 0.6s, 6);
+  background-image: url("../images/team/scenes/sprites/dc_environment.png");
+  height: 1075px;
+  top: 0;
+  width: 1911px;
+}
+@keyframes dc_env {
+  .fromto (0, -11466px);
+}
+@-webkit-keyframes dc_env {
+  .fromto (0, -11466px);
+}
+
+//Heating
+.heating {
+  background-image: url("../images/team/scenes/sprites/heating.png");
+  height: 61px;
+  left: 626px;
+  top: 219px;
+  width: 81px;
+  &.active {
+    .animation (heating, 3.2s, 16, 1);
+  }
+}
+.heatingcatcher {
+  height: 61px;
+  left: 626px;
+  top: 219px;
+  width: 81px;
+}
+@keyframes heating {
+  .fromto (0, -1296px);
+}
+@-webkit-keyframes heating {
+  .fromto (0, -1296px);
+}
+
+//Plant
+.plant {
+  background-image: url("../images/team/scenes/sprites/plant.png");
+  height: 121px;
+  left: 875px;
+  top: 910px;
+  width: 86px;
+  &.active {
+    .animation (plant, 3.6s, 18, 1);
+  }
+}
+.plantcatcher {
+  height: 80px;
+  left: 880px;
+  top: 940px;
+  width: 58px;
+}
+@keyframes plant {
+  .fromto (0, -1548px);
+}
+@-webkit-keyframes plant {
+  .fromto (0, -1548px);
+}
+
+//Upper Archive
+.upper_archive {
+  background-image: url("../images/team/scenes/sprites/upper_archive.png");
+  height: 113px;
+  left: 835px;
+  top: 639px;
+  width: 77px;
+  &.active {
+    .animation (upper_archive, 3s, 15, 1);
+  }
+}
+@keyframes upper_archive {
+  .fromto (0, -1155px);
+}
+@-webkit-keyframes upper_archive {
+  .fromto (0, -1155px);
+}
+
+//Screens
+.screen1,
+.screen2,
+.screen3,
+.screen4 {
+  height: 88px;
+  width: 69px;
+  &.active {
+    .animation (screen, 9s, 45, 1);
+  }
+}
+.screen1 {
+  background-image: url("../images/team/scenes/sprites/ScreenBotLeft.png");
+  left: 1288px;
+  top: 140px;
+}
+.screen2 {
+  background-image: url("../images/team/scenes/sprites/ScreenBotRight.png");
+  left: 930px;
+  top: 510px;
+}
+.screen3 {
+  .animation (screen, 9s, 45);
+  background-image: url("../images/team/scenes/sprites/ScreenBotLeft.png");
+  left: 705px;
+  top: 350px;
+}
+.screen4 {
+  .animation (screen, 9s, 45);
+  background-image: url("../images/team/scenes/sprites/ScreenBotLeft.png");
+  left: 1800px;
+  top: 215px;
+}
+@keyframes screen {
+  .fromto (0, -3105px);
+}
+@-webkit-keyframes screen {
+  .fromto (0, -3105px);
+}
+
+//Solitaires
+.solitair1,
+.solitair2,
+.solitair3 {
+  background-image: url("../images/team/scenes/sprites/solitair.png");
+  height: 53px;
+  width: 37px;
+  &.active {
+    .animation (solitair, 6s, 30, 1);
+  }
+}
+.solitair1 {
+  left: 1030px;
+  top: 271px;
+}
+.solitair2 {
+  left: 1068px;
+  top: 290px;
+}
+.solitair3 {
+  left: 1163px;
+  top: 340px;
+}
+@keyframes solitair {
+  .fromto (0, -1110px);
+}
+@-webkit-keyframes solitair {
+  .fromto (0, -1110px);
+}
+
+//Robot
+.robot {
+  background-image: url("../images/team/scenes/sprites/robot.png");
+  height: 130px;
+  left: 789px;
+  top: 617px;
+  width: 117px;
+  &.active {
+    .animation (robot1, 19.6s, 98, 1);
+  }
+}
+@keyframes robot1 {
+  .fromto (0, -11466px);
+}
+@-webkit-keyframes robot1 {
+  .fromto (0, -11466px);
+}
+
+//Sofa
+.sofa_2f {
+  background-image: url("../images/team/scenes/sprites/sofa_2f.png");
+  height: 139px;
+  left: 410px;
+  top: 375px;
+  width: 135px;
+  &.active {
+    .animation (sofa, 5.2s, 26, 1);
+  }
+}
+.sofacatcher {
+  height: 95px;
+  left: 410px;
+  top: 405px;
+  width: 135px;
+}
+@keyframes sofa {
+  .fromto (0, -3510px);
+}
+@-webkit-keyframes sofa {
+  .fromto (0, -3510px);
+}
+
+//Printer
+.printer {
+  background-image: url("../images/team/scenes/sprites/printer.png");
+  height: 32px;
+  left: 1300px;
+  top: 585px;
+  width: 35px;
+  &.active {
+    .animation (printer, 7.8s, 39, 1);
+  }
+}
+@keyframes printer {
+  .fromto (0, -1365px);
+}
+@-webkit-keyframes printer {
+  .fromto (0, -1365px);
+}
+
+//Oven
+.oven {
+  background-image: url("../images/team/scenes/sprites/oven.png");
+  height: 94px;
+  left: 653px;
+  top: 718px;
+  width: 76px;
+  &.cooking {
+    .animation (herd, 4.3s, 43, 1);
+  }
+  &.herd {
+    .animation (oven, 4.4s, 22, 1);
+  }
+}
+.cookingcatcher {
+  height: 35px;
+  left: 665px;
+  top: 718px;
+  width: 50px;
+}
+.herdcatcher {
+  height: 40px;
+  left: 690px;
+  top: 755px;
+  width: 38px;
+}
+@keyframes oven {
+  from {
+    background-image: url("../images/team/scenes/sprites/oven.png");
+    background-position: 0;
+  }
+  to {
+    background-image: url("../images/team/scenes/sprites/oven.png");
+    background-position: -1672px;
+  }
+}
+@-webkit-keyframes oven {
+  from {
+    background-image: url("../images/team/scenes/sprites/oven.png");
+    background-position: 0;
+  }
+  to {
+    background-image: url("../images/team/scenes/sprites/oven.png");
+    background-position: -1672px;
+  }
+}
+@keyframes herd {
+  from {
+    background-image: url("../images/team/scenes/sprites/herd.png");
+    background-position: 0;
+  }
+  to {
+    background-image: url("../images/team/scenes/sprites/herd.png");
+    background-position: -3268px;
+  }
+}
+@-webkit-keyframes herd {
+  from {
+    background-image: url("../images/team/scenes/sprites/herd.png");
+    background-position: 0;
+  }
+  to {
+    background-image: url("../images/team/scenes/sprites/herd.png");
+    background-position: -3268px;
+  }
+}
+
+//Coffee Machine
+.coffeemachine {
+  .animation (coffeemachine, 4.4s, 22);
+  background-image: url("../images/team/scenes/sprites/coffeemachine.png");
+  height: 120px;
+  left: 597px;
+  top: 720px;
+  width: 97px;
+}
+.coffeecatcher {
+  height: 60px;
+  left: 620px;
+  top: 717px;
+  width: 55px;
+}
+@keyframes coffeemachine {
+  .fromto (0, -2134px);
+}
+@-webkit-keyframes coffeemachine {
+  .fromto (0, -2134px);
+}
+
+//DB
+.db {
+  .animation (db1, 4.2s, 21);
+  background-image: url("../images/team/scenes/sprites/db_00.png");
+  height: 145px;
+  left: 400px;
+  top: 840px;
+  width: 62px;
+  &.greeting {
+    background-image: url("../images/team/scenes/sprites/db_10.png");
+  }
+  /*&.dbcoffee {
+    background-image: url("../images/team/scenes/sprites/db_20.png");
+    height: 147px;
+    width: 73px;
+    .animation (db3, 2.4s, 12, 1);
+
+  }*/
+  &.db_rest {
+    background-image: none;
+  }
+}
+.dbcatcher {
+  height: 145px;
+  left: 400px;
+  top: 840px;
+  width: 62px;
+}
+.char-db.active {
+  .animation (db3, 2.4s, 12, 1);
+  background-image: url("../images/team/scenes/sprites/db_20.png");
+  height: 147px;
+  left: 401px;
+  top: 838px;
+  width: 72px;
+}
+.char-db1 {
+  height: 147px;
+  width: 73px;
+  &.active {
+    .animation (walking-path-db1, 3s, 16, 1);
+    .walk-db {
+      .animation (walking-db1, .8s, 4);
+      background-image: url("../images/team/scenes/sprites/db_21.png");
+      height: 147px;
+      width: 73px;
+    }
+  }
+}
+.char-db2 {
+  height: 144px;
+  width: 73px;
+  &.active {
+    .animation (walking-path-db2, 1s, 6, 1);
+    .walk-db {
+      .animation (walking-db1, .8s, 4);
+      background-image: url("../images/team/scenes/sprites/db_23.png");
+      height: 144px;
+      width: 73px;
+    }
+  }
+}
+.char-db3.active {
+  .animation (walking-path-db3, 4.4s, 22, 1);
+  background-image: url("../images/team/scenes/sprites/db_22.png");
+  height: 147px;
+  left: 638px;
+  top: 682px;
+  width: 92px;
+}
+.char-db4 {
+  height: 147px;
+  width: 73px;
+  &.active {
+    .animation (walking-path-db4, 1s, 6, 1);
+    .walk-db {
+      .animation (walking-db1, .8s, 4);
+      background-image: url("../images/team/scenes/sprites/db_21.png");
+      height: 147px;
+      width: 73px;
+    }
+  }
+}
+.char-db5 {
+  height: 144px;
+  width: 73px;
+  &.active {
+    .animation (walking-path-db5, 3s, 16, 1);
+    .walk-db {
+      .animation (walking-db1, .8s, 4);
+      background-image: url("../images/team/scenes/sprites/db_23.png");
+      height: 144px;
+      width: 73px;
+    }
+  }
+}
+@keyframes db1 {
+  .fromto (0, -1302px);
+}
+@-webkit-keyframes db1 {
+  .fromto (0, -1302px);
+}
+@keyframes db2 {
+  .fromto (0, -806px);
+}
+@-webkit-keyframes db2 {
+  .fromto (0, -806px);
+}
+@keyframes db3 {
+  .fromto (0, -876px);
+}
+@-webkit-keyframes db3 {
+  .fromto (0, -876px);
+}
+@keyframes db4 {
+  .fromto (0, -876px);
+}
+@-webkit-keyframes db4 {
+  .fromto (0, -876px);
+}
+@keyframes walking-db1 {
+  .fromto (0, -292px);
+}
+@-webkit-keyframes walking-db1 {
+  .fromto (0, -292px);
+}
+@keyframes walking-path-db1 {
+  from { left: 400px; top: 840px;}
+  to { left: 700px; top: 700px; }
+}
+@-webkit-keyframes walking-path-db1 {
+  from { left: 400px; top: 840px;}
+  to { left: 700px; top: 700px; }
+}
+@keyframes walking-path-db2 {
+  from { left: 700px; top: 700px;}
+  to { left: 638px; top: 682px; }
+}
+@-webkit-keyframes walking-path-db2 {
+  from { left: 700px; top: 700px;}
+  to { left: 638px; top: 682px; }
+}
+@keyframes walking-path-db3 {
+  .fromto (0, -2024px);
+}
+@-webkit-keyframes walking-path-db3 {
+  .fromto (0, -2024px);
+}
+@keyframes walking-path-db4 {
+  from { left: 638px; top: 682px; }
+  to { left: 700px; top: 700px;}
+}
+@-webkit-keyframes walking-path-db4 {
+  from { left: 638px; top: 682px; }
+  to { left: 700px; top: 700px;}
+}
+@keyframes walking-path-db5 {
+  from { left: 700px; top: 700px; }
+  to { left: 400px; top: 840px;}
+}
+@-webkit-keyframes walking-path-db5 {
+  from { left: 700px; top: 700px; }
+  to { left: 400px; top: 840px;}
+}
+
+//CT
+.ct {
+  .animation (ct1, 4.2s, 21);
+  background-image: url("../images/team/scenes/sprites/ct_00.png");
+  height: 197px;
+  left: 452px;
+  top: 781px;
+  width: 205px;
+  &.greeting {
+    .animation (ct2, 2.4s, 12);
+    background-image: url("../images/team/scenes/sprites/ct_10.png");
+  }
+}
+.ctcatcher {
+  height: 92px;
+  left: 505px;
+  top: 780px;
+  width: 80px;
+}
+.ct_file.active {
+  .animation (ct3, 3s, 15, 1);
+  background-image: url("../images/team/scenes/sprites/ct_20.png");
+  height: 197px;
+  left: 452px;
+  top: 781px;
+  width: 205px;
+}
+.ct_filecatcher {
+  height: 30px;
+  left: 550px;
+  top: 800px;
+  width: 30px;
+}
+@keyframes ct1 {
+  .fromto (0, -4305px);
+}
+@-webkit-keyframes ct1 {
+  .fromto (0, -4305px);
+}
+@keyframes ct2 {
+  .fromto (0, -2460px);
+}
+@-webkit-keyframes ct2 {
+  .fromto (0, -2460px);
+}
+@keyframes ct3 {
+  .fromto (0, -3075px);
+}
+@-webkit-keyframes ct3 {
+  .fromto (0, -3075px);
+}
+
+//EL
+.el {
+  .animation (el1, 3.2s, 16);
+  background-image: url("../images/team/scenes/sprites/el_00.png");
+  height: 266px;
+  left: 251px;
+  top: 475px;
+  width: 150px;
+  &.greeting {
+    .animation (el2, 2.8s, 14);
+    background-image: url("../images/team/scenes/sprites/el_10.png");
+  }
+}
+.elcatcher {
+  height: 140px;
+  left: 280px;
+  top: 485px;
+  width: 95px;
+}
+@keyframes el1 {
+  .fromto (0, -2400px);
+}
+@-webkit-keyframes el1 {
+  .fromto (0, -2400px);
+}
+@keyframes el2 {
+  .fromto (0, -2100px);
+}
+@-webkit-keyframes el2 {
+  .fromto (0, -2100px);
+}
+
+//FS
+.fs {
+  .animation (fs1, 4s, 20);
+  background-image: url("../images/team/scenes/sprites/fs_00.png");
+  height: 176px;
+  left: 509px;
+  top: 826px;
+  width: 232px;
+  &.greeting {
+    .animation (fs2, 3.4s, 17);
+    background-image: url("../images/team/scenes/sprites/fs_10.png");
+  }
+  &.fs_rest {
+    background-image: url("../images/team/scenes/sprites/fs_30.png");
+    height: 181px;
+    left: 509px;
+    top: 826px;
+    width: 295px;
+  }
+}
+.fs_desk {
+  background-image: url("../images/team/scenes/sprites/fs_30.png");
+  height: 181px;
+  left: 509px;
+  top: 826px;
+  width: 295px;
+}
+.fs_stamp.active {
+  .animation (fs_stamp, 3.6s, 18, 1);
+  background-image: url("../images/team/scenes/sprites/fs_29.png");
+  height: 176px;
+  left: 509px;
+  top: 826px;
+  width: 232px;
+}
+.fs_stamp_b.active {
+  .animation (fs_stamp_b, 2s, 10, 1);
+  background-image: url("../images/team/scenes/sprites/fs_29b.png");
+  height: 176px;
+  left: 509px;
+  top: 826px;
+  width: 232px;
+}
+.fs_stamp_c.active {
+  .animation (fs_stamp_c, 2.8s, 14, 1);
+  background-image: url("../images/team/scenes/sprites/fs_29c.png");
+  height: 176px;
+  left: 509px;
+  top: 826px;
+  width: 232px;
+}
+.fs_stampcatcher {
+  height: 25px;
+  left: 580px;
+  top: 877px;
+  width: 23px;
+}
+.fs_standup.active {
+  .animation (fs_standup, 3.4s, 17, 1);
+  background-image: url("../images/team/scenes/sprites/fs_20.png");
+  height: 181px;
+  left: 509px;
+  top: 826px;
+  width: 295px;
+}
+.char-fs1 {
+  height: 143px;
+  width: 58px;
+  &.active {
+    .animation (walking-path-fs1, 1.4s, 16, 1);
+    .walk-fs {
+      .animation (walking-fs1, .8s, 4);
+      background-image: url("../images/team/scenes/sprites/fs_21.png");
+      height: 143px;
+      width: 58px;
+    }
+  }
+}
+.char-fs2 {
+  height: 143px;
+  width: 58px;
+  &.active {
+    .animation (walking-path-fs2, 1.6s, 16, 1);
+    .walk-fs {
+      .animation (walking-fs1, .8s, 4);
+      background-image: url("../images/team/scenes/sprites/fs_21.png");
+      height: 143px;
+      width: 58px;
+    }
+  }
+}
+.char-fs3 {
+  height: 143px;
+  width: 58px;
+  &.active {
+    .animation (walking-path-fs3, 1.8s, 16, 1);
+    .walk-fs {
+      .animation (walking-fs1, .8s, 4);
+      background-image: url("../images/team/scenes/sprites/fs_21.png");
+      height: 143px;
+      width: 58px;
+    }
+  }
+}
+.char-fs4 {
+  height: 143px;
+  width: 58px;
+  &.active {
+    .animation (walking-path-fs4, 2.4s, 16, 1);
+    .walk-fs {
+      .animation (walking-fs1, .8s, 4);
+      background-image: url("../images/team/scenes/sprites/fs_26.png");
+      height: 143px;
+      width: 58px;
+    }
+  }
+}
+.char-fs5 {
+  height: 143px;
+  width: 58px;
+  &.active {
+    .animation (walking-path-fs5, 1.2s, 16, 1);
+    .walk-fs {
+      .animation (walking-fs1, .8s, 4);
+      background-image: url("../images/team/scenes/sprites/fs_21.png");
+      height: 143px;
+      width: 58px;
+    }
+  }
+}
+.char-fs6 {
+  height: 141px;
+  width: 57px;
+  &.active {
+    .animation (walking-path-fs6, 1.8s, 16, 1);
+    .walk-fs {
+      .animation (walking-fs2, .8s, 4);
+      background-image: url("../images/team/scenes/sprites/fs_27.png");
+      height: 141px;
+      width: 57px;
+    }
+  }
+}
+.char-fs7 {
+  height: 141px;
+  width: 57px;
+  &.active {
+    .animation (walking-path-fs7, 2.4s, 16, 1);
+    .walk-fs {
+      .animation (walking-fs2, .8s, 4);
+      background-image: url("../images/team/scenes/sprites/fs_22.png");
+      height: 141px;
+      width: 57px;
+    }
+  }
+}
+.char-fs8 {
+  height: 141px;
+  width: 57px;
+  &.active {
+    .animation (walking-path-fs8, 1.8s, 16, 1);
+    .walk-fs {
+      .animation (walking-fs2, .8s, 4);
+      background-image: url("../images/team/scenes/sprites/fs_27.png");
+      height: 141px;
+      width: 57px;
+    }
+  }
+}
+.char-fs9 {
+  height: 141px;
+  width: 57px;
+  &.active {
+    .animation (walking-path-fs9, 1.6s, 16, 1);
+    .walk-fs {
+      .animation (walking-fs2, .8s, 4);
+      background-image: url("../images/team/scenes/sprites/fs_27.png");
+      height: 141px;
+      width: 57px;
+    }
+  }
+}
+.char-fs10 {
+  height: 141px;
+  width: 57px;
+  &.active {
+    .animation (walking-path-fs10, 1.4s, 16, 1);
+    .walk-fs {
+      .animation (walking-fs2, .8s, 4);
+      background-image: url("../images/team/scenes/sprites/fs_22.png");
+      height: 141px;
+      width: 57px;
+    }
+  }
+}
+.fs_sitting.active {
+  .animation (fs_sitting, 3s, 15, 1);
+  background-image: url("../images/team/scenes/sprites/fs_28.png");
+  height: 179px;
+  left: 509px;
+  top: 826px;
+  width: 244px;
+}
+.fs_meeting {
+  background-image: url("../images/team/scenes/sprites/fs_31.png");
+  height: 219px;
+  left: 627px;
+  top: 135px;
+  width: 279px;
+}
+.fs-sittingmeeting.active {
+  .animation (fs-sittingmeeting, 4s, 20, 1);
+  background-image: url("../images/team/scenes/sprites/fs_23.png");
+  height: 218px;
+  left: 626px;
+  top: 136px;
+  width: 280px;
+}
+.fs_havingmeeting.active {
+  .animation (fs_meeting1, 4.2s, 21);
+  background-image: url("../images/team/scenes/sprites/fs_24.png");
+  height: 202px;
+  left: 715px;
+  top: 152px;
+  width: 191px;
+}
+.fs-standingupmeeting.active {
+  .animation (fs-standingupmeeting, 3.8s, 19, 1);
+  background-image: url("../images/team/scenes/sprites/fs_25.png");
+  height: 219px;
+  left: 627px;
+  top: 135px;
+  width: 279px;
+}
+.fscatcher {
+  height: 125px;
+  left: 655px;
+  top: 854px;
+  width: 80px;
+}
+@keyframes fs1 {
+  .fromto (0, -4640px);
+}
+@-webkit-keyframes fs1 {
+  .fromto (0, -4640px);
+}
+@keyframes fs2 {
+  .fromto (0, -3944px);
+}
+@-webkit-keyframes fs2 {
+  .fromto (0, -3944px);
+}
+@keyframes fs_meeting1 {
+  .fromto (0, -4011px);
+}
+@-webkit-keyframes fs_meeting1 {
+  .fromto (0, -4011px);
+}
+@keyframes fs_stamp {
+  .fromto (0, -4176px);
+}
+@-webkit-keyframes fs_stamp {
+  .fromto (0, -4176px);
+}
+@keyframes fs_stamp_b {
+  .fromto (0, -2320px);
+}
+@-webkit-keyframes fs_stamp_b {
+  .fromto (0, -2320px);
+}
+@keyframes fs_stamp_c {
+  .fromto (0, -3248px);
+}
+@-webkit-keyframes fs_stamp_c {
+  .fromto (0, -3248px);
+}
+@keyframes fs_standup {
+  .fromto (0, -5015px);
+}
+@-webkit-keyframes fs_standup {
+  .fromto (0, -5015px);
+}
+@keyframes walking-fs1 {
+  .fromto (0, -232px);
+}
+@-webkit-keyframes walking-fs1 {
+  .fromto (0, -232px);
+}
+@keyframes walking-fs2 {
+  .fromto (0, -228px);
+}
+@-webkit-keyframes walking-fs2 {
+  .fromto (0, -228px);
+}
+@keyframes walking-path-fs1 {
+  from { left: 770px; top: 871px;}
+  to { left: 770px; top:760px; }
+}
+@-webkit-keyframes walking-path-fs1 {
+  from { left: 770px; top: 871px;}
+  to { left: 770px; top:760px; }
+}
+@keyframes walking-path-fs2 {
+  from { left: 770px; top:760px;}
+  to { left: 620px; top:660px; }
+}
+@-webkit-keyframes walking-path-fs2 {
+  from { left: 770px; top:760px;}
+  to { left: 620px; top:660px; }
+}
+@keyframes walking-path-fs3 {
+  from { left: 620px; top:660px;}
+  to { left: 450px; top:550px; }
+}
+@-webkit-keyframes walking-path-fs3 {
+  from { left: 620px; top:660px;}
+  to { left: 450px; top:550px; }
+}
+@keyframes walking-path-fs4 {
+  from { left: 450px; top:550px; }
+  to { left: 660px; top: 270px; }
+}
+@-webkit-keyframes walking-path-fs4 {
+  from { left: 450px; top:550px; }
+  to { left: 660px; top: 270px; }
+}
+@keyframes walking-path-fs5 {
+  from { left: 660px; top: 270px; }
+  to { left: 623px; top: 200px; }
+}
+@-webkit-keyframes walking-path-fs5 {
+  from { left: 660px; top: 270px; }
+  to { left: 623px; top: 200px; }
+}
+@keyframes fs-sittingmeeting {
+  .fromto (0, -5600px);
+}
+@-webkit-keyframes fs-sittingmeeting {
+  .fromto (0, -5600px);
+}
+@keyframes fs-standingupmeeting {
+  .fromto (0, -5301px);
+}
+@-webkit-keyframes fs-standingupmeeting {
+  .fromto (0, -5301px);
+}
+@keyframes walking-path-fs6 {
+  from { left: 623px; top: 200px; }
+  to { left: 660px; top: 270px; }
+}
+@-webkit-keyframes walking-path-fs6 {
+  from { left: 623px; top: 200px; }
+  to { left: 660px; top: 270px; }
+}
+@keyframes walking-path-fs7 {
+  from { left: 660px; top: 270px; }
+  to { left: 450px; top:550px; }
+}
+@-webkit-keyframes walking-path-fs7 {
+  from { left: 660px; top: 270px; }
+  to { left: 450px; top:550px; }
+}
+@keyframes walking-path-fs8 {
+  from { left: 450px; top:550px; }
+  to { left: 620px; top:660px;}
+}
+@-webkit-keyframes walking-path-fs8 {
+  from { left: 450px; top:550px; }
+  to { left: 620px; top:660px;}
+}
+@keyframes walking-path-fs9 {
+  from { left: 620px; top:660px; }
+  to { left: 770px; top:760px;}
+}
+@-webkit-keyframes walking-path-fs9 {
+  from { left: 620px; top:660px; }
+  to { left: 770px; top:760px;}
+}
+@keyframes walking-path-fs10 {
+  from { left: 770px; top:760px; }
+  to{ left: 700px; top: 871px;}
+}
+@-webkit-keyframes walking-path-fs10 {
+  from { left: 770px; top:760px; }
+  to{ left: 700px; top: 871px;}
+}
+@keyframes fs_sitting {
+  .fromto (0, -3660px);
+}
+@-webkit-keyframes fs_sitting {
+  .fromto (0, -3660px);
+}
+
+//SS
+.ss {
+  .animation (ss1, 3.2s, 16);
+  background-image: url("../images/team/scenes/sprites/ss_00.png");
+  height: 199px;
+  left: 715px;
+  top: 672px;
+  width: 216px;
+  &.greeting {
+    .animation (ss2, 2.8s, 14);
+    background-image: url("../images/team/scenes/sprites/ss_10.png");
+    height: 202px;
+    top: 669px;
+  }
+}
+.ss_desk {
+  background-image: url("../images/team/scenes/sprites/ss_29.png");
+  height: 212px;
+  left: 715px;
+  top: 659px;
+  width: 301px;
+}
+.ss_stamp.active {
+  .animation (ss_stamp, 3.8s, 19, 1);
+  background-image: url("../images/team/scenes/sprites/ss_31.png");
+  height: 201px;
+  left: 715px;
+  top: 670px;
+  width: 216px;
+}
+.ss_stampcatcher {
+  height: 28px;
+  left: 760px;
+  top: 710px;
+  width: 32px;
+}
+.ss_standup.active {
+  .animation (ss_standup, 2.8s, 14, 1);
+  background-image: url("../images/team/scenes/sprites/ss_20.png");
+  height: 212px;
+  left: 715px;
+  top: 659px;
+  width: 301px;
+}
+.char-ss1 {
+  height: 135px;
+  width: 54px;
+  &.active {
+    .animation (walking-path-ss1, 1.2s, 16, 1);
+    .walk-ss {
+      .animation (walking-ss2, .8s, 4);
+      background-image: url("../images/team/scenes/sprites/ss_22.png");
+      height: 135px;
+      width: 54px;
+    }
+  }
+}
+.char-ss2 {
+  height: 133px;
+  width: 52px;
+  &.active {
+    .animation (walking-path-ss2, 1.8s, 16, 1);
+    .walk-ss {
+      .animation (walking-ss1, .8s, 4);
+      background-image: url("../images/team/scenes/sprites/ss_21.png");
+      height: 133px;
+      width: 52px;
+    }
+  }
+}
+.char-ss3 {
+  height: 133px;
+  width: 52px;
+  &.active {
+    .animation (walking-path-ss3, 1.8s, 16, 1);
+    .walk-ss {
+      .animation (walking-ss1, .8s, 4);
+      background-image: url("../images/team/scenes/sprites/ss_21.png");
+      height: 133px;
+      width: 52px;
+    }
+  }
+}
+.char-ss4 {
+  height: 133px;
+  width: 52px;
+  &.active {
+    .animation (walking-path-ss4, 2.4s, 16, 1);
+    .walk-ss {
+      .animation (walking-ss1, .8s, 4);
+      background-image: url("../images/team/scenes/sprites/ss_26.png");
+      height: 133px;
+      width: 52px;
+    }
+  }
+}
+.char-ss5 {
+  height: 133px;
+  width: 52px;
+  &.active {
+    .animation (walking-path-ss5, 2.4s, 16, 1);
+    .walk-ss {
+      .animation (walking-ss1, .8s, 4);
+      background-image: url("../images/team/scenes/sprites/ss_26.png");
+      height: 133px;
+      width: 52px;
+    }
+  }
+}
+.ss_meeting {
+  background-image: url("../images/team/scenes/sprites/ss_30.png");
+  height: 174px;
+  left: 836px;
+  top: 117px;
+  width: 175px;
+}
+.ss-sittingmeeting.active {
+  .animation (ss-sittingmeeting, 2s, 10, 1);
+  background-image: url("../images/team/scenes/sprites/ss_23.png");
+  height: 175px;
+  left: 836px;
+  top: 117px;
+  width: 156px;
+}
+.ss_havingmeeting.active {
+  .animation (ss_meeting1, 3.4s, 17);
+  background-image: url("../images/team/scenes/sprites/ss_24.png");
+  height: 153px;
+  left: 836px;
+  top: 139px;
+  width: 123px;
+}
+.ss-standingupmeeting.active {
+  .animation (ss-standingupmeeting, 1.8s, 9, 1);
+  background-image: url("../images/team/scenes/sprites/ss_25.png");
+  height: 175px;
+  left: 836px;
+  top: 117px;
+  width: 174px;
+}
+.char-ss6 {
+  height: 135px;
+  width: 54px;
+  &.active {
+    .animation (walking-path-ss6, 2.4s, 16, 1);
+    .walk-ss {
+      .animation (walking-ss2, .8s, 4);
+      background-image: url("../images/team/scenes/sprites/ss_22.png");
+      height: 135px;
+      width: 54px;
+    }
+  }
+}
+.char-ss7 {
+  height: 135px;
+  width: 54px;
+  &.active {
+    .animation (walking-path-ss7, 2.4s, 16, 1);
+    .walk-ss {
+      .animation (walking-ss2, .8s, 4);
+      background-image: url("../images/team/scenes/sprites/ss_22.png");
+      height: 135px;
+      width: 54px;
+    }
+  }
+}
+.char-ss8 {
+  height: 135px;
+  width: 54px;
+  &.active {
+    .animation (walking-path-ss8, 1.8s, 16, 1);
+    .walk-ss {
+      .animation (walking-ss2, .8s, 4);
+      background-image: url("../images/team/scenes/sprites/ss_27.png");
+      height: 135px;
+      width: 54px;
+    }
+  }
+}
+.char-ss9 {
+  height: 135px;
+  width: 54px;
+  &.active {
+    .animation (walking-path-ss9, 1.6s, 16, 1);
+    .walk-ss {
+      .animation (walking-ss2, .8s, 4);
+      background-image: url("../images/team/scenes/sprites/ss_27.png");
+      height: 135px;
+      width: 54px;
+    }
+  }
+}
+.char-ss10 {
+  height: 133px;
+  width: 52px;
+  &.active {
+    .animation (walking-path-ss10, 1.4s, 16, 1);
+    .walk-ss {
+      .animation (walking-ss1, .8s, 4);
+      background-image: url("../images/team/scenes/sprites/ss_26.png");
+      height: 133px;
+      width: 52px;
+    }
+  }
+}
+.char-ss11 {
+  height: 133px;
+  width: 52px;
+  &.active {
+    .animation (walking-path-ss11, .8s, 16, 1);
+    .walk-ss {
+      .animation (walking-ss1, .8s, 4);
+      background-image: url("../images/team/scenes/sprites/ss_21.png");
+      height: 133px;
+      width: 52px;
+    }
+  }
+}
+.ss_standup.active {
+  .animation (ss_standup, 2.8s, 14, 1);
+  background-image: url("../images/team/scenes/sprites/ss_20.png");
+  height: 212px;
+  left: 715px;
+  top: 659px;
+  width: 301px;
+}
+.ss_sitting.active {
+  .animation (ss_sitting, 2s, 10, 1);
+  background-image: url("../images/team/scenes/sprites/ss_28.png");
+  height: 212px;
+  left: 715px;
+  top: 659px;
+  width: 225px;
+}
+
+@keyframes ss1 {
+  .fromto (0, -3456px);
+}
+@-webkit-keyframes ss1 {
+  .fromto (0, -3456px);
+}
+@keyframes ss2 {
+  .fromto (0, -3024px);
+}
+@-webkit-keyframes ss2 {
+  .fromto (0, -3024px);
+}
+@keyframes ss_meeting1 {
+  .fromto (0, -2091px);
+}
+@-webkit-keyframes ss_meeting1 {
+  .fromto (0, -2091px);
+}
+@keyframes ss_stamp {
+  .fromto (0, -4104px);
+}
+@-webkit-keyframes ss_stamp {
+  .fromto (0, -4104px);
+}
+@keyframes ss_standup {
+  .fromto (0, -4214px);
+}
+@-webkit-keyframes ss_standup {
+  .fromto (0, -4214px);
+}
+@keyframes walking-ss1 {
+  .fromto (0, -208px);
+}
+@-webkit-keyframes walking-ss1 {
+  .fromto (0, -208px);
+}
+@keyframes walking-ss2 {
+  .fromto (0, -216px);
+}
+@-webkit-keyframes walking-ss2 {
+  .fromto (0, -216px);
+}
+@keyframes walking-path-ss1 {
+  from { left: 980px; top: 710px; }
+  to { left: 850px; top: 792px; }
+}
+@-webkit-keyframes walking-path-ss1 {
+  from { left: 980px; top: 710px; }
+  to { left: 850px; top: 792px; }
+}
+@keyframes walking-path-ss2 {
+  from { left: 850px; top: 792px; }
+  to { left: 620px; top:660px; }
+}
+@-webkit-keyframes walking-path-ss2 {
+  from { left: 850px; top: 792px; }
+  to { left: 620px; top:660px; }
+}
+@keyframes walking-path-ss3 {
+  from { left: 620px; top:660px;}
+  to { left: 450px; top:550px; }
+}
+@-webkit-keyframes walking-path-ss3 {
+  from { left: 620px; top:660px;}
+  to { left: 450px; top:550px; }
+}
+@keyframes walking-path-ss4 {
+  from { left: 450px; top:550px; }
+  to { left: 660px; top: 290px; }
+}
+@-webkit-keyframes walking-path-ss4 {
+  from { left: 450px; top:550px; }
+  to { left: 660px; top: 290px; }
+}
+@keyframes walking-path-ss5 {
+  from { left: 660px; top: 290px; }
+  to { left: 1000px; top: 160px; }
+}
+@-webkit-keyframes walking-path-ss5 {
+  from { left: 660px; top: 290px; }
+  to { left: 1000px; top: 160px; }
+}
+@keyframes ss-sittingmeeting {
+  .fromto (0, -1560px);
+}
+@-webkit-keyframes ss-sittingmeeting {
+  .fromto (0, -1560px);
+}
+@keyframes ss-standingupmeeting {
+  .fromto (0, -1566px);
+}
+@-webkit-keyframes ss-standingupmeeting {
+  .fromto (0, -1566px);
+}
+@keyframes walking-path-ss6 {
+  from { left: 1000px; top: 160px; }
+  to { left: 660px; top: 290px; }
+}
+@-webkit-keyframes walking-path-ss6 {
+  from { left: 1000px; top: 160px; }
+  to { left: 660px; top: 290px; }
+}
+@keyframes walking-path-ss7 {
+  from { left: 660px; top: 290px; }
+  to { left: 450px; top:550px; }
+}
+@-webkit-keyframes walking-path-ss7 {
+  from { left: 660px; top: 290px; }
+  to { left: 450px; top:550px; }
+}
+@keyframes walking-path-ss8 {
+  from { left: 450px; top:550px; }
+  to { left: 620px; top:660px;}
+}
+@-webkit-keyframes walking-path-ss8 {
+  from { left: 450px; top:550px; }
+  to { left: 620px; top:660px;}
+}
+@keyframes walking-path-ss9 {
+  from { left: 620px; top:660px; }
+  to { left: 850px; top: 792px; }
+}
+@-webkit-keyframes walking-path-ss9 {
+  from { left: 620px; top:660px; }
+  to { left: 850px; top: 792px; }
+}
+@keyframes walking-path-ss10 {
+  from { left: 850px; top: 792px; }
+  to { left: 980px; top: 710px; }
+}
+@-webkit-keyframes walking-path-ss10 {
+  from { left: 850px; top: 792px; }
+  to { left: 980px; top: 710px; }
+}
+@keyframes walking-path-ss11 {
+  from { left: 980px; top: 710px; }
+  to { left: 900px; top: 700px; }
+}
+@-webkit-keyframes walking-path-ss11 {
+  from { left: 980px; top: 710px; }
+  to { left: 900px; top: 700px; }
+}
+@keyframes ss_sitting {
+  .fromto (0, -2250px);
+}
+@-webkit-keyframes ss_sitting {
+  .fromto (0, -2250px);
+}
+
+.meetingcacher {
+  height: 80px;
+  left: 780px;
+  top: 195px;
+  width: 165px;
+}
+.endmeetingcacher.active {
+  height: 80px;
+  left: 780px;
+  top: 195px;
+  width: 165px;
+}
+
+//STAMP
+.stamp.active {
+  background-image: url("../images/team/scenes/sprites/ss_32.png");
+  height: 14px;
+  left: 603px;
+  top: 901px;
+  width: 13px;
+}
+.char-stamp {
+  height: 14px;
+  width: 13px;
+  &.active {
+    .animation (walking-path-stamp, 1.2s, 16, 1);
+    .walk-stamp {
+      .animation (walking-stamp, .3s, 6);
+      background-image: url("../images/team/scenes/sprites/ss_32.png");
+      height: 14px;
+      width: 13px;
+    }
+  }
+}
+.char-stampback {
+  height: 14px;
+  width: 13px;
+  &.active {
+    .animation (walking-path-stampback, 1.4s, 16, 1);
+    .walk-stamp {
+      .animation (walking-stamp, .3s, 6);
+      background-image: url("../images/team/scenes/sprites/ss_32.png");
+      height: 14px;
+      width: 13px;
+    }
+  }
+}
+@keyframes walking-stamp {
+  .fromto (0, -78px);
+}
+@-webkit-keyframes walking-stamp {
+  .fromto (0, -78px);
+}
+@keyframes walking-path-stamp {
+  from { left: 639px; top: 853px; }
+  to { left: 815px; top: 678px; }
+}
+@-webkit-keyframes walking-path-stamp {
+  from { left: 639px; top: 853px; }
+  to { left: 815px; top: 678px; }
+}
+@keyframes walking-path-stampback {
+  from { left: 795px; top: 685px; }
+  to { left: 639px; top: 853px; }
+}
+@-webkit-keyframes walking-path-stampback {
+  from { left: 795px; top: 685px; }
+  to { left: 639px; top: 853px; }
+}
+
+//TD
+.td {
+  .animation (td1, 3s, 15);
+  background-image: url("../images/team/scenes/sprites/td_00.png");
+  height: 190px;
+  left: 1088px;
+  top: 188px;
+  width: 174px;
+  &.greeting {
+    .animation (td2, 2.8s, 14);
+    background-image: url("../images/team/scenes/sprites/td_10.png");
+  }
+  &.rest {
+    height: 0;
+    width: 0;
+  }
+}
+.tdcatcher {
+  height: 110px;
+  left: 1135px;
+  top: 180px;
+  width: 75px;
+}
+.telephone.active {
+  .animation (td3, 6.2s, 31, 1);
+  background-image: url("../images/team/scenes/sprites/td_15.png");
+  height: 190px;
+  left: 1088px;
+  top: 188px;
+  width: 174px;
+}
+.telephonecatcher {
+  height: 30px;
+  left: 1215px;
+  top: 270px;
+  width: 40px;
+}
+.tdtalking.active {
+  .animation (td4, 4s, 20);
+  background-image: url("../images/team/scenes/sprites/td_20.png");
+  height: 190px;
+  left: 1088px;
+  top: 188px;
+  width: 174px;
+}
+@keyframes td1 {
+  .fromto (0, -2610px);
+}
+@-webkit-keyframes td1 {
+  .fromto (0, -2610px);
+}
+@keyframes td2 {
+  .fromto (0, -2436px);
+}
+@-webkit-keyframes td2 {
+  .fromto (0, -2436px);
+}
+@keyframes td3 {
+  .fromto (0, -5394px);
+}
+@-webkit-keyframes td3 {
+  .fromto (0, -5394px);
+}
+@keyframes td4 {
+  .fromto (0, -3480px);
+}
+@-webkit-keyframes td4 {
+  .fromto (0, -3480px);
+}
+
+//BG
+.bg {
+  .animation (bg1, 3.8s, 19);
+  background-image: url("../images/team/scenes/sprites/bg_00.png");
+  height: 182px;
+  left: 1362px;
+  top: 206px;
+  width: 145px;
+  &.greeting {
+    .animation (bg2, 2.8s, 14);
+    background-image: url("../images/team/scenes/sprites/bg_10.png");
+    left: 1344px;
+    width: 163px;
+  }
+}
+.bgcatcher {
+  height: 145px;
+  left: 1350px;
+  top: 220px;
+  width: 60px;
+}
+.blackboard.active {
+  .animation (bg3, 3.8s, 19, 1);
+  background-image: url("../images/team/scenes/sprites/bg_20.png");
+  height: 182px;
+  left: 1362px;
+  top: 206px;
+  width: 145px;
+}
+.blackboardcatcher {
+  height: 125px;
+  left: 1410px;
+  top: 200px;
+  width: 100px;
+}
+@keyframes bg1 {
+  .fromto (0, -2755px);
+}
+@-webkit-keyframes bg1 {
+  .fromto (0, -2755px);
+}
+@keyframes bg2 {
+  .fromto (0, -2282px);
+}
+@-webkit-keyframes bg2 {
+  .fromto (0, -2282px);
+}
+@keyframes bg3 {
+  from {
+    background-position: 0;
+  }
+  to {
+    background-position: -2755px;
+    .animation (bg1, 3.8s, 19);
+  }
+}
+@-webkit-keyframes bg3 {
+  from {
+    background-position: 0;
+  }
+  to {
+    background-position: -2755px;
+    .animation (bg1, 3.8s, 19);
+  }
+}
+
+//MM
+.mm {
+  .animation (mm1, 2.8s, 14);
+  background-image: url("../images/team/scenes/sprites/mm_00.png");
+  height: 201px;
+  left: 746px;
+  top: 308px;
+  width: 201px;
+  &.greeting {
+    .animation (mm2, 2.8s, 14);
+    background-image: url("../images/team/scenes/sprites/mm_10.png");
+  }
+}
+.mm-table.active {
+  background-image: url("../images/team/scenes/sprites/mm_29.png");
+  height: 204px;
+  left: 746px;
+  top: 306px;
+  width: 201px;
+}
+.mm-askcatcher {
+  height: 45px;
+  left: 870px;
+  top: 370px;
+  width: 45px;
+}
+.mm-standup.active {
+  .animation (mm-standup, 3s, 15, 1);
+  background-image: url("../images/team/scenes/sprites/mm_20.png");
+  height: 204px;
+  left: 746px;
+  top: 306px;
+  width: 201px;
+}
+.char-mm1 {
+  height: 151px;
+  width: 58px;
+  &.active {
+    .animation (walking-path-mm1, 4s, 16, 1);
+    .walk-mm {
+      .animation (walking-mm, .8s, 4);
+      background-image: url("../images/team/scenes/sprites/mm_25.png");
+      height: 151px;
+      width: 58px;
+    }
+  }
+}
+.char-mm2 {
+  height: 151px;
+  width: 58px;
+  &.active {
+    .animation (walking-path-mm2, 3.2s, 16, 1);
+    .walk-mm {
+      .animation (walking-mm, .8s, 4);
+      background-image: url("../images/team/scenes/sprites/mm_21.png");
+      height: 151px;
+      width: 58px;
+    }
+  }
+}
+.char-mm3 {
+  height: 151px;
+  width: 58px;
+  &.active {
+    .animation (walking-path-mm3, 3.2s, 16, 1);
+    .walk-mm {
+      .animation (walking-mm, .8s, 4);
+      background-image: url("../images/team/scenes/sprites/mm_24.png");
+      height: 151px;
+      width: 58px;
+    }
+  }
+}
+.mm-talking.active {
+  .animation (mm-talking, 4s, 20, 2);
+  background-image: url("../images/team/scenes/sprites/mm_23.png");
+  height: 151px;
+  left: 1060px;
+  top: 190px;
+  width: 58px;
+}
+.char-mm4 {
+  height: 151px;
+  width: 58px;
+  &.active {
+    .animation (walking-path-mm4, 3.2s, 16, 1);
+    .walk-mm {
+      .animation (walking-mm, .8s, 4);
+      background-image: url("../images/team/scenes/sprites/mm_25.png");
+      height: 151px;
+      width: 58px;
+    }
+  }
+}
+.char-mm5 {
+  height: 151px;
+  width: 58px;
+  &.active {
+    .animation (walking-path-mm5, 3.2s, 16, 1);
+    .walk-mm {
+      .animation (walking-mm, .8s, 4);
+      background-image: url("../images/team/scenes/sprites/mm_22.png");
+      height: 151px;
+      width: 58px;
+    }
+  }
+}
+.char-mm6 {
+  height: 151px;
+  width: 58px;
+  &.active {
+    .animation (walking-path-mm6, 4s, 16, 1);
+    .walk-mm {
+      .animation (walking-mm, .8s, 4);
+      background-image: url("../images/team/scenes/sprites/mm_24.png");
+      height: 151px;
+      width: 58px;
+    }
+  }
+}
+.mm-sitdown.active {
+  .animation (mm-sitdown, 3s, 15, 1);
+  background-image: url("../images/team/scenes/sprites/mm_26.png");
+  height: 204px;
+  left: 746px;
+  top: 306px;
+  width: 201px;
+}
+@keyframes mm1 {
+  .fromto (0, -2814px);
+}
+@-webkit-keyframes mm1 {
+  .fromto (0, -2814px);
+}
+@keyframes mm2 {
+  .fromto (0, -2814px);
+}
+@-webkit-keyframes mm2 {
+  .fromto (0, -2814px);
+}
+@keyframes mm-standup {
+  .fromto (0, -3015px);
+}
+@-webkit-keyframes mm-standup {
+  .fromto (0, -3015px);
+}
+@keyframes walking-mm {
+  .fromto (0, -232px);
+}
+@-webkit-keyframes walking-mm {
+  .fromto (0, -232px);
+}
+@keyframes walking-path-mm1 {
+  from { left: 735px; top: 330px }
+  to { left: 1120px; top: 505px }
+}
+@-webkit-keyframes walking-path-mm1 {
+  from { left: 735px; top: 330px }
+  to { left: 1120px; top: 505px }
+}
+@keyframes walking-path-mm2 {
+  from { left: 1120px; top: 505px }
+  to { left: 1365px; top: 350px }
+}
+@-webkit-keyframes walking-path-mm2 {
+  from { left: 1120px; top: 505px }
+  to { left: 1365px; top: 350px }
+}
+@keyframes walking-path-mm3 {
+  from { left: 1365px; top: 350px }
+  to { left: 1060px; top: 190px }
+}
+@-webkit-keyframes walking-path-mm3 {
+  from { left: 1365px; top: 350px }
+  to { left: 1060px; top: 190px }
+}
+@keyframes mm-talking {
+  .fromto (0, -1160px);
+}
+@-webkit-keyframes mm-talking {
+  .fromto (0, -1160px);
+}
+@keyframes walking-path-mm4 {
+  from { left: 1060px; top: 190px }
+  to { left: 1365px; top: 350px }
+}
+@-webkit-keyframes walking-path-mm4 {
+  from { left: 1060px; top: 190px }
+  to { left: 1365px; top: 350px }
+}
+@keyframes walking-path-mm5 {
+  from { left: 1365px; top: 350px }
+  to { left: 1120px; top: 505px }
+}
+@-webkit-keyframes walking-path-mm5 {
+  from { left: 1365px; top: 350px }
+  to { left: 1120px; top: 505px }
+}
+@keyframes walking-path-mm6 {
+  from { left: 1120px; top: 505px }
+  to { left: 735px; top: 330px }
+}
+@-webkit-keyframes walking-path-mm6 {
+  from { left: 1120px; top: 505px }
+  to { left: 735px; top: 330px }
+}
+@keyframes mm-sitdown {
+  .fromto (0, -3015px);
+}
+@-webkit-keyframes mm-sitdown {
+  .fromto (0, -3015px);
+}
+
+//NP
+.np {
+  .animation (np1, 2.8s, 14);
+  background-image: url("../images/team/scenes/sprites/np_00.png");
+  height: 176px;
+  left: 633px;
+  top: 421px;
+  width: 152px;
+  &.greeting {
+    .animation (np2, 3s, 15);
+    background-image: url("../images/team/scenes/sprites/np_10.png");
+  }
+}
+.dodge.active {
+  .animation (np3, 2.8s, 14, 1);
+  background-image: url("../images/team/scenes/sprites/np_20.png");
+  height: 176px;
+  left: 633px;
+  top: 421px;
+  width: 152px;
+}
+@keyframes np1 {
+  .fromto (0, -2128px);
+}
+@-webkit-keyframes np1 {
+  .fromto (0, -2128px);
+}
+@keyframes np2 {
+  .fromto (0, -2280px);
+}
+@-webkit-keyframes np2 {
+  .fromto (0, -2280px);
+}
+@keyframes np3 {
+  .fromto (0, -2128px);
+}
+@-webkit-keyframes np3 {
+  .fromto (0, -2128px);
+}
+
+//NP Computer
+.np-computer {
+  background-image: url("../images/team/scenes/sprites/gizmo_03.png");
+  height: 51px;
+  left: 659px;
+  top: 542px;
+  width: 53px;
+  &.active {
+    .animation (np-computer, 3.4s, 17, 1);
+  }
+}
+.npcpu-catcher {
+  height: 40px;
+  left: 659px;
+  top: 542px;
+  width: 40px;
+}
+@keyframes np-computer {
+  .fromto (0, -901px);
+}
+@-webkit-keyframes np-computer {
+  .fromto (0, -901px);
+}
+
+//MH
+.mh {
+  .animation (mh1, 2.8s, 14);
+  background-image: url("../images/team/scenes/sprites/mh_00.png");
+  height: 177px;
+  left: 458px;
+  top: 530px;
+  width: 145px;
+  &.greeting {
+    .animation (mh2, 3.2s, 16);
+    background-image: url("../images/team/scenes/sprites/mh_10.png");
+  }
+  &.rest {
+    height: 0;
+    width: 0;
+  }
+}
+.garbage {
+  background-image: url("../images/team/scenes/sprites/mh_91.png");
+  height: 49px;
+  left: 547px;
+  top: 485px;
+  width: 22px;
+  &.active {
+    .animation (mh-basket, 1.4s, 7, 1);
+  }
+}
+.mhcatcher {
+  height: 30px;
+  left: 460px;
+  top: 605px;
+  width: 30px;
+}
+.mhshot {
+  &.active {
+    .animation (mh-shot, 2.8s, 15, 1);
+    background-image: url("../images/team/scenes/sprites/mh_20.png");
+    height: 177px;
+    left: 458px;
+    top: 530px;
+    width: 145px;
+  }
+}
+.char-paperball {
+  height: 11px;
+  width: 10px;
+  &.active {
+    .animation (walking-path-paperball, .6s, 16, 1);
+    .walk-paperball {
+      .animation (walking-paperball, .6s, 3);
+      background-image: url("../images/team/scenes/sprites/mh_90.png");
+      height: 11px;
+      width: 10px;
+    }
+  }
+}
+@keyframes mh1 {
+  .fromto (0, -2030px);
+}
+@-webkit-keyframes mh1 {
+  .fromto (0, -2030px);
+}
+@keyframes mh2 {
+  .fromto (0, -2320px);
+}
+@-webkit-keyframes mh2 {
+  .fromto (0, -2320px);
+}
+@keyframes mh-shot {
+  .fromto (0, -2175px);
+}
+@-webkit-keyframes mh-shot {
+  .fromto (0, -2175px);
+}
+@keyframes walking-paperball {
+  .fromto (0, -30px);
+}
+@-webkit-keyframes walking-paperball {
+  .fromto (0, -30px);
+}
+@keyframes walking-path-paperball {
+  from { left: 525px; top: 530px }
+  to { left: 545px; top: 500px; }
+}
+@-webkit-keyframes walking-path-paperball {
+  from { left: 525px; top: 530px }
+  to { left: 545px; top: 500px; }
+}
+@keyframes mh-basket {
+  .fromto (-22px, -176px);
+}
+@-webkit-keyframes mh-basket {
+  .fromto (-22px, -176px);
+}
+
+//MHA
+.mha {
+  .animation (mha1, 2.8s, 14);
+  background-image: url("../images/team/scenes/sprites/mha_00.png");
+  height: 220px;
+  left: 330px;
+  top: 783px;
+  width: 227px;
+  &.greeting {
+    .animation (mha2, 3s, 15);
+    background-image: url("../images/team/scenes/sprites/mha_10.png");
+  }
+}
+.mha_rest {
+  height: 220px;
+  left: 330px;
+  top: 783px;
+  width: 227px;
+  &.dark {
+    background-image: url("../images/team/scenes/sprites/mha_28.png");
+  }
+  &.light {
+    background-image: url("../images/team/scenes/sprites/mha_27.png");
+  }
+}
+.mha_standup.active {
+  .animation (mha_dark, 5s, 25, 1);
+  background-image: url("../images/team/scenes/sprites/mha_20.png");
+  height: 220px;
+  left: 330px;
+  top: 783px;
+  width: 227px;
+}
+.mha_sitdown.active {
+  .animation (mha_sitdown, 3.2s, 16, 1);
+  background-image: url("../images/team/scenes/sprites/mha_26.png");
+  height: 220px;
+  left: 330px;
+  top: 783px;
+  width: 227px;
+}
+.mhacatcher {
+  height: 125px;
+  left: 380px;
+  top: 810px;
+  width: 90px;
+}
+.char-mha1 {
+  height: 132px;
+  width: 54px;
+  &.active {
+    .animation (walking-path-mha1, 1.8s, 16, 1);
+    .walk-mha {
+      .animation (walking-mha1, .8s, 4);
+      background-image: url("../images/team/scenes/sprites/mha_21.png");
+      height: 132px;
+      width: 54px;
+    }
+  }
+}
+.char-mha2 {
+  height: 126px;
+  width: 48px;
+  &.active {
+    .animation (walking-path-mha2, 3.2s, 16, 1);
+    .walk-mha {
+      .animation (walking-mha2, .8s, 4);
+      background-image: url("../images/team/scenes/sprites/mha_22.png");
+      height: 126px;
+      width: 48px;
+    }
+  }
+}
+.mha_switch_on.active {
+  .animation (mha3, 2.8s, 24, 1);
+  background-image: url("../images/team/scenes/sprites/mha_23.png");
+  height: 151px;
+  left: 975px;
+  top: 652px;
+  width: 114px
+}
+.char-mha4 {
+  height: 132px;
+  width: 54px;
+  &.active {
+    .animation (walking-path-mha4, 3.2s, 16, 1);
+    .walk-mha {
+      .animation (walking-mha1, .8s, 4);
+      background-image: url("../images/team/scenes/sprites/mha_24.png");
+      height: 132px;
+      width: 54px;
+    }
+  }
+}
+.char-mha5 {
+  height: 126px;
+  width: 48px;
+  &.active {
+    .animation (walking-path-mha5, 1.2s, 16, 1);
+    .walk-mha {
+      .animation (walking-mha2, .8s, 4);
+      background-image: url("../images/team/scenes/sprites/mha_25.png");
+      height: 126px;
+      width: 48px;
+    }
+  }
+}
+@keyframes mha1 {
+  .fromto (0, -3178px);
+}
+@-webkit-keyframes mha1 {
+  .fromto (0, -3178px);
+}
+@keyframes mha2 {
+  .fromto (0, -3405px);
+}
+@-webkit-keyframes mha2 {
+  .fromto (0, -3405px);
+}
+@keyframes mha_dark {
+  .fromto (0, -5675px);
+}
+@-webkit-keyframes mha_dark {
+  .fromto (0, -5675px);
+}
+@keyframes walking-mha1 {
+  .fromto (0, -216px);
+}
+@-webkit-keyframes walking-mha1 {
+  .fromto (0, -216px);
+}
+@keyframes walking-mha2 {
+  .fromto (0, -192px);
+}
+@-webkit-keyframes walking-mha2 {
+  .fromto (0, -192px);
+}
+@keyframes walking-path-mha1 {
+  from { left: 490px; top: 795px; }
+  to { left: 590px; top: 840px; }
+}
+@-webkit-keyframes walking-path-mha1 {
+  from { left: 490px; top: 795px; }
+  to { left: 590px; top: 840px; }
+}
+@keyframes walking-path-mha2 {
+  from { left: 590px; top: 840px; }
+  to { left: 990px; top: 685px; }
+}
+@-webkit-keyframes walking-path-mha2 {
+  from { left: 590px; top: 840px; }
+  to { left: 990px; top: 685px; }
+}
+@keyframes mha3 {
+  .fromto (0, -2736px);
+}
+@-webkit-keyframes mha3 {
+  .fromto (0, -2736px);
+}
+@keyframes walking-path-mha4 {
+  from { left: 970px; top: 680px; }
+  to { left: 590px; top: 840px; }
+}
+@-webkit-keyframes walking-path-mha4 {
+  from { left: 970px; top: 680px; }
+  to { left: 590px; top: 840px; }
+}
+@keyframes walking-path-mha5 {
+  from { left: 590px; top: 840px; }
+  to { left: 520px; top: 810px; }
+}
+@-webkit-keyframes walking-path-mha5 {
+  from { left: 590px; top: 840px; }
+  to { left: 520px; top: 810px; }
+}
+@keyframes mha_sitdown {
+  .fromto (0, -3632px);
+}
+@-webkit-keyframes mha_sitdown{
+  .fromto (0, -3632px);
+}
+
+//Paperplain
+.garbage2 {
+  background-image: url("../images/team/scenes/sprites/PaperPlane_25c.png");
+  height: 102px;
+  left: 1165px;
+  top: 490px;
+  width: 56px;
+  &.active {
+    .animation (garbage2, 1.8s, 9, 1);
+  }
+}
+.papers {
+  background-image: url("../images/team/scenes/sprites/PaperPlane_25.png");
+  height: 74px;
+  left: 925px;
+  top: 685px;
+  width: 84px;
+  &.active {
+    .animation (papers, 2.4s, 19, 1);
+  }
+}
+.char-paperplane {
+  height: 11px;
+  width: 17px;
+  &.active {
+    .animation (walking-path-paperplane, 1.6s, 16, 1);
+    .walk-paperplane {
+      .animation (walking-paperplane, 1.2s, 6);
+      background-image: url("../images/team/scenes/sprites/PaperPlane_25b.png");
+      height: 11px;
+      width: 17px;
+    }
+  }
+}
+@keyframes walking-paperplane {
+  .fromto (0, -102px);
+}
+@-webkit-keyframes walking-paperplane {
+  .fromto (0, -102px);
+}
+@keyframes walking-path-paperplane {
+  from { left: 945px; top: 680px }
+  to { left: 1165px; top: 490px }
+}
+@-webkit-keyframes walking-path-paperplane {
+  from { left: 945px; top: 680px }
+  to { left: 1165px; top: 490px }
+}
+@keyframes papers {
+  .fromto (0, -1596px);
+}
+@-webkit-keyframes papers {
+  .fromto (0, -1596px);
+}
+@keyframes garbage2 {
+  .fromto (-56px, -560px);
+}
+@-webkit-keyframes garbage2 {
+  .fromto (-56px, -560px);
+}
+
+//SWITCH
+.dc_switch {
+  background-image: url("../images/team/scenes/sprites/mha_29.png");
+  height: 151px;
+  left: 975px;
+  top: 652px;
+  width: 114px;
+  &.switched {
+    background-position: -570px 0;
+  }
+  &.switch_off {
+    .animation (mha_switchoff, 3s, 15);
+    background-image: url("../images/team/scenes/sprites/mha_29.png");
+  }
+}
+.dc_switchcatcher {
+  height: 151px;
+  left: 975px;
+  top: 652px;
+  width: 114px;
+}
+@keyframes mha_switchoff {
+  .fromto (0, -684px);
+}
+@-webkit-keyframes mha_switchoff {
+  .fromto (0, -684px);
+}
+
+//MK
+.mk {
+  .animation (mk1, 2.8s, 14);
+  background-image: url("../images/team/scenes/sprites/mk_00.png");
+  height: 178px;
+  left: 809px;
+  top: 470px;
+  width: 145px;
+  &.greeting {
+    .animation (mk2, 3.2s, 16);
+    background-image: url("../images/team/scenes/sprites/mk_10.png");
+  }
+}
+.mkcatcher {
+  height: 95px;
+  left: 870px;
+  top: 470px;
+  width: 60px;
+}
+.shot.active {
+  .animation (mk3, 4.6s, 23, 1);
+  background-image: url("../images/team/scenes/sprites/mk_20.png");
+  height: 178px;
+  left: 809px;
+  top: 470px;
+  width: 145px;
+}
+.char-shot {
+  height: 3px;
+  width: 5px;
+  &.active {
+    .animation (walking-path-shot, .5s, 16, 1);
+    .walk-shot {
+      background-image: url("../images/team/scenes/sprites/mk_99.png");
+      height: 3px;
+      width: 5px;
+    }
+  }
+}
+.shotcatcher {
+  height: 30px;
+  left: 905px;
+  top: 535px;
+  width: 35px;
+}
+@keyframes mk1 {
+  .fromto (0, -2030px);
+}
+@-webkit-keyframes mk1 {
+  .fromto (0, -2030px);
+}
+@keyframes mk2 {
+  .fromto (0, -2320px);
+}
+@-webkit-keyframes mk2 {
+  .fromto (0, -2320px);
+}
+@keyframes mk3 {
+  .fromto (0, -3335px);
+}
+@-webkit-keyframes mk3 {
+  .fromto (0, -3335px);
+}
+/*@keyframes walking-shot {
+  .fromto (0, -2030px);
+}
+@-webkit-keyframes walking-shot {
+  .fromto (0, -2030px);
+}*/
+@keyframes walking-path-shot {
+  from { left: 865px; top: 508px;}
+  to { left: 665px; top: 445px; }
+}
+@-webkit-keyframes walking-path-shot {
+  from { left: 865px; top: 508px;}
+  to { left: 665px; top: 445px; }
+}
+
+//MJ
+.mj {
+  .animation (mj1, 3s, 15);
+  background-image: url("../images/team/scenes/sprites/mj_00.png");
+  height: 172px;
+  left: 740px;
+  top: 500px;
+  width: 169px;
+  &.greeting {
+    .animation (mj2, 3.2s, 14);
+    background-image: url("../images/team/scenes/sprites/mj_10.png");
+  }
+}
+.mj-talking.active {
+  .animation (mj3, 6.2s, 31, 1);
+  background-image: url("../images/team/scenes/sprites/mj_20.png");
+  height: 172px;
+  left: 740px;
+  top: 500px;
+  width: 169px;
+}
+.mjcatcher {
+  height: 120px;
+  left: 740px;
+  top: 520px;
+  width: 85px;
+}
+@keyframes mj1 {
+  .fromto (0, -2535px);
+}
+@-webkit-keyframes mj1 {
+  .fromto (0, -2535px);
+}
+@keyframes mj2 {
+  .fromto (0, -2366px);
+}
+@-webkit-keyframes mj2 {
+  .fromto (0, -2366px);
+}
+@keyframes mj3 {
+  .fromto (0, -5239px);
+}
+@-webkit-keyframes mj3 {
+  .fromto (0, -5239px);
+}
+
+//MR
+.mr {
+  .animation (mr1, 3.2s, 16);
+  background-image: url("../images/team/scenes/sprites/mr_00.png");
+  height: 261px;
+  left: 233px;
+  top: 601px;
+  width: 240px;
+  &.greeting {
+    .animation (mr2, 3.2s, 16);
+    background-image: url("../images/team/scenes/sprites/mr_10.png");
+  }
+}
+.fan.active {
+  .animation (mr3, 5.2s, 26, 1);
+  background-image: url("../images/team/scenes/sprites/mr_20.png");
+  height: 261px;
+  left: 233px;
+  top: 601px;
+  width: 240px;
+}
+.mrcatcher {
+  height: 105px;
+  left: 275px;
+  top: 670px;
+  width: 100px;
+}
+#fancatcher {
+  height: 45px;
+  left: 305px;
+  top: 595px;
+  width: 45px;
+}
+@keyframes mr1 {
+  .fromto (0, -3840px);
+}
+@-webkit-keyframes mr1 {
+  .fromto (0, -3840px);
+}
+@keyframes mr2 {
+  .fromto (0, -3840px);
+}
+@-webkit-keyframes mr2 {
+  .fromto (0, -3840px);
+}
+@keyframes mr3 {
+  .fromto (0, -6240px);
+}
+@-webkit-keyframes mr3 {
+  .fromto (0, -6240px);
+}
+
+//SA
+.sa {
+  .animation (sa1, 3.4s, 17);
+  background-image: url("../images/team/scenes/sprites/sa_00.png");
+  height: 177px;
+  left: 128px;
+  top: 705px;
+  width: 145px;
+  &.greeting {
+    .animation (sa2, 3s, 15);
+    background-image: url("../images/team/scenes/sprites/sa_10.png");
+  }
+}
+.sacatcher {
+  height: 110px;
+  left: 140px;
+  top: 705px;
+  width: 110px;
+}
+@keyframes sa1 {
+  .fromto (0, -2465px);
+}
+@-webkit-keyframes sa1 {
+  .fromto (0, -2465px);
+}
+@keyframes sa2 {
+  .fromto (0, -2175px);
+}
+@-webkit-keyframes sa2 {
+  .fromto (0, -2175px);
+}
+
+//JO
+.jo {
+  .animation (jo1, 6.4s, 32);
+  background-image: url("../images/team/scenes/sprites/jo_00.png");
+  height: 134px;
+  left: 400px;
+  top: 727px;
+  width: 91px;
+  &.greeting {
+    .animation (jo2, 1.6s, 8);
+    background-image: url("../images/team/scenes/sprites/jo_10.png");
+  }
+}
+.jocatcher {
+  height: 92px;
+  left: 400px;
+  top: 727px;
+  width: 80px;
+}
+@keyframes jo1 {
+  .fromto (0, -2912px);
+}
+@-webkit-keyframes jo1 {
+  .fromto (0, -2912px);
+}
+@keyframes jo2 {
+  .fromto (0, -728px);
+}
+@-webkit-keyframes jo2 {
+  .fromto (0, -728px);
+}
+
+//AK
+.ak {
+  .animation (ak1, 3s, 15);
+  background-image: url("../images/team/scenes/sprites/ak_00.png");
+  height: 235px;
+  left: 937px;
+  top: 603px;
+  width: 289px;
+  &.greeting {
+    .animation (ak2, 2.8s, 14);
+    background-image: url("../images/team/scenes/sprites/ak_10.png");
+    height: 245px;
+    top: 593px;
+  }
+}
+.akcatcher {
+  height: 60px;
+  left: 1135px;
+  top: 600px;
+  width: 55px;
+}
+.ak-doubt-catcher {
+  height: 30px;
+  left: 1125px;
+  top: 653px;
+  width: 37px;
+}
+.ak-rest.active {
+  height: 329px;
+  left: 937px;
+  top: 509px;
+  width: 289px;
+  background-image: url("../images/team/scenes/sprites/ak_29.png");
+}
+.ak-standup.active {
+  .animation (ak_standup, 3s, 15, 1);
+  background-image: url("../images/team/scenes/sprites/ak_20.png");
+  height: 329px;
+  left: 937px;
+  top: 509px;
+  width: 289px;
+}
+.char-ak {
+  height: 144px;
+  width: 53px;
+  &.active {
+    .animation (walking-path-ak, 1.2s, 16, 1);
+    .walk-ak-1 {
+      .animation (walking-ak1, .8s, 4);
+      background-image: url("../images/team/scenes/sprites/ak_21.png");
+      height: 144px;
+      width: 53px;
+    }
+  }
+}
+.char-ak-1 {
+  height: 144px;
+  width: 53px;
+  &.active {
+    .animation (walking-path-ak1, 1.8s, 16, 1);
+    .walk-ak-1 {
+      .animation (walking-ak1, .8s, 4);
+      background-image: url("../images/team/scenes/sprites/ak_24.png");
+      height: 144px;
+      width: 53px;
+    }
+  }
+}
+.ak-talking.active {
+  .animation (ak_talking, 3.2s, 31, 2);
+  background-image: url("../images/team/scenes/sprites/ak_23.png");
+  height: 139px;
+  left: 840px;
+  top: 400px;
+  width: 52px;
+}
+.char-ak-2 {
+  height: 147px;
+  width: 57px;
+  &.active {
+    .animation (walking-path-ak2, 1.8s, 16, 1);
+    .walk-ak-2 {
+      .animation (walking-ak2, .8s, 4);
+      background-image: url("../images/team/scenes/sprites/ak_25.png");
+      height: 147px;
+      width: 57px;
+    }
+  }
+}
+.char-ak-3 {
+  height: 147px;
+  width: 57px;
+  &.active {
+    .animation (walking-path-ak3, 1.2s, 16, 1);
+    .walk-ak-2 {
+      .animation (walking-ak2, .8s, 4);
+      background-image: url("../images/team/scenes/sprites/ak_22.png");
+      height: 147px;
+      width: 57px;
+    }
+  }
+}
+.ak-sitdown.active {
+  .animation (ak_sitdown, 3.2s, 15, 1);
+  background-image: url("../images/team/scenes/sprites/ak_26.png");
+  height: 338px;
+  left: 937px;
+  top: 500px;
+  width: 289px;
+}
+@keyframes ak1 {
+  .fromto (0, -4335px);
+}
+@-webkit-keyframes ak1 {
+  .fromto (0, -4335px);
+}
+@keyframes ak2 {
+  .fromto (0, -4046px);
+}
+@-webkit-keyframes ak2 {
+  .fromto (0, -4046px);
+}
+@keyframes ak_standup {
+  .fromto (0, -4335px);
+}
+@-webkit-keyframes ak_standup {
+  .fromto (0, -4335px);
+}
+@keyframes walking-ak1 {
+  .fromto (0, -212px);
+}
+@-webkit-keyframes walking-ak1 {
+  .fromto (0, -212px);
+}
+@keyframes walking-ak2 {
+  .fromto (0, -228px);
+}
+@-webkit-keyframes walking-ak2 {
+  .fromto (0, -228px);
+}
+@keyframes walking-path-ak {
+  from { left: 1004px; top: 500px; }
+  to { left: 1050px; top: 480px; }
+}
+@-webkit-keyframes walking-path-ak {
+  from { left: 1004px; top: 500px; }
+  to { left: 1050px; top: 480px; }
+}
+@keyframes walking-path-ak1 {
+  from { left: 1050px; top: 480px; }
+  to { left: 840px; top: 400px; }
+}
+@-webkit-keyframes walking-path-ak1 {
+  from { left: 1050px; top: 480px; }
+  to { left: 840px; top: 400px; }
+}
+@keyframes ak_talking {
+  .fromto (0, -1612px);
+}
+@-webkit-keyframes ak_talking {
+  .fromto (0, -1612px);
+}
+@keyframes walking-path-ak2 {
+  from { left: 840px; top: 400px; }
+  to { left: 1050px; top: 480px; }
+}
+@-webkit-keyframes walking-path-ak2 {
+  from { left: 840px; top: 400px; }
+  to { left: 1050px; top: 480px; }
+}
+@keyframes walking-path-ak3 {
+  from { left: 1050px; top: 480px; }
+  to { left: 1004px; top: 500px; }
+}
+@-webkit-keyframes walking-path-ak3 {
+  from { left: 1050px; top: 480px; }
+  to { left: 1004px; top: 500px; }
+}
+@keyframes ak_sidown {
+  .fromto (0, -4335px);
+}
+@-webkit-keyframes ak_sitdown {
+  .fromto (0, -4335px);
+}
+
+.textbox {
+  color: white;
+  display: none;
+  font-size: 12px;
+  font-family: 'Press Start 2P', cursive;
+  line-height: 16px;
+  position: absolute;
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+  width: 600px;
+  &.visible {
+    display: block;
+    p {
+      margin: 0;
+      &.description {
+        background-image: url("../images/blue-box.png");
+        border-radius: 10px;
+        padding: 10px;
+      }
+    }
+  }
+}
+
+#draggable {
+  background-image: url("../images/blue-box.png");
+  color: white;
+  display: none;
+  font-size: 12px;
+  font-family: 'Press Start 2P', cursive;
+  line-height: 16px;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  width: 600px;
+  border-radius: 10px;
+  margin: 0;
+  padding: 20px;
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+  &.active {
+    display: block;
+    h2 {
+      color: white;
+      font-size: 15px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+  }
+  #dr_close {
+    font-size: 9px;
+    position: absolute;
+    right: 10px;
+    top: 0;
+    &:after {
+      content: "X";
+      margin-left: 5px;
+    }
+    &:hover {
+      cursor: url("../images/team/pixel-pointer.png"), auto;
+    }
+  }
+}
+
+.brackets {
+  font-size: .8em;
+  &:before {
+    content: "(";
+  }
+  &:after {
+    content: ")";
+  }
+}
+
+/*** TEAM PAGE ***/
+.container-fluid {
+  padding: 0;
+}
+#team_scenes {
+  background-color: white;
+  position: relative;
+  #floor_thumbs {
+    display: inline-block;
+    position: absolute;
+    vertical-align: top;
+    width: 215px;
+    .floor {
+      border: 1px solid #eee;
+      margin: 5px;
+      min-height: 136px;
+      padding: 5px 10px 0;
+      text-align: center;
+      img {
+        opacity: .4;
+        .transition (all, .3s, ease);
+      }
+      span {
+        display: block;
+        font-size: 0.7em;
+        text-align: center;
+      }
+      &.active,
+      &:hover {
+        img {
+          opacity: 1;
+        }
+      }
+      &.active {
+        span {
+          font-weight: bold;
+        }
+      }
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  #floor_viewer {
+    height: 580px;
+    margin-left: 220px;
+    position: relative;
+    vertical-align: top;
+    cursor: url("../images/team/pixel-default.png"), auto;
+    &.move {
+      cursor: url("../images/team/pixel-down.png"), auto;
+    }
+    > div {
+      display: none;
+      height: 100%;
+      &.active {
+        display: block;
+      }
+      &.pixelbox {
+        overflow: hidden;
+        position: relative;
+        > div {
+          max-width: none;
+          position: relative;
+          > div {
+            position: absolute;
+            &.sprite {
+              &:hover {
+                cursor: url("../images/team/pixel-pointer.png"), auto;
+              }
+            }
+          }
+        }
+        img {
+          max-width: none;
+        }
+        &#floora {
+          > div {
+            height: 1197px;
+            width: 1562px;
+          }
+        }
+        &#floorb {
+          > div {
+            height: 1150px;
+            width: 1830px;
+          }
+        }
+        &#floorc {
+          > div {
+            height: 1075px;
+            width: 1911px;
+          }
+        }
+      }
+      &#video-container {
+        max-height: 580px;
+        .embed-responsive {
+          height: 100%;
+          #ytplayer {
+            max-height: 100%;
+          }
+        }
+      }
+    }
+    &.opened {
+      height: auto;
+    }
+  }
+  #floor_thumbs,
+  #floor_viewer {
+    padding: 5px;
+  }
+}
+@media (max-width: @breakpointMenu) {
+  #team_scenes,
+  #show-points {
+    display: none;
+  }
+}
+#team {
+  h1 {
+    text-transform: uppercase;
+  }
+  ul {
+    margin: 10px 0;
+    li {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    &#departments {
+      text-align: center;
+      li {
+        background-color: @corp_blue;
+        border: none;
+        .border-radius(4px);
+        color: white;
+        display: inline-block;
+        font-size: 16px;
+        margin: 2px;
+        padding: 10px 12px;
+        position: relative;
+        text-align: center;
+        z-index: @z-slider;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      &.active {
+        li:not(.active) {
+          background-color: #ccc;
+        }
+      }
+    }
+    &#people {
+      margin: 10px 0;
+      text-align: center;
+      li {
+        display: inline-block;
+        margin: 10px 10px 0;
+        .transition (opacity, .1s, ease-in);
+        img {
+          &.real {
+            display: block;
+          }
+          &.pixel {
+            display: none;
+          }
+        }
+        &.deactivated {
+          opacity: .2;
+        }
+        .name {
+          display: block;
+          font-weight: bold;
+          margin-top: 5px;
+          visibility: hidden;
+        }
+        .department {
+          display: block;
+          visibility: hidden;
+        }
+        .links {
+          visibility: hidden;
+          a {
+            .at2x ("../images/social/team-icons.png", 500%, 300%);
+            background-repeat: no-repeat;
+            color: transparent;
+            display: inline-block;
+            font-size: 0;
+            line-height: 40px;
+            opacity: .7;
+            &.facebook {
+              .spritesizer (0, 0, 30px, 30px);
+            }
+            &.twitter {
+              .spritesizer (-30px, 0, 30px, 30px);
+            }
+            &.linkedin {
+              .spritesizer (-60px, 0, 30px, 30px);
+            }
+            &.googleplus {
+              .spritesizer (-90px, 0, 30px, 30px);
+            }
+            &.email {
+              .spritesizer (-120px, 0, 30px, 30px);
+            }
+            &.web {
+              .spritesizer (0, -30px, 30px, 30px);
+            }
+            &.xing {
+              .spritesizer (-30px, -30px, 30px, 30px);
+            }
+            &.instagram {
+              .spritesizer (-60px, -30px, 30px, 30px);
+            }
+            &.youtube {
+              .spritesizer (-90px, -30px, 30px, 30px);
+            }
+            &.chess {
+              .spritesizer (-120px, -30px, 30px, 30px);
+            }
+            &.legends {
+              .spritesizer (0, -60px, 30px, 30px);
+            }
+            &.five00px {
+              .spritesizer (-30px, -60px, 30px, 30px);
+            }
+          }
+        }
+        &:not(.deactivated):hover {
+          img {
+            &.real {
+              display: none;
+            }
+            &.pixel {
+              display: block;
+            }
+          }
+          .name,
+          .department {
+            visibility: visible;
+          }
+          .links {
+            visibility: visible;
+            a {
+              &:hover {
+                opacity: 1;
+              }
+            }
+          }
+        }
+        @media (max-width: @ipadPort) {
+          .name,
+          .department,
+          .links {
+            visibility: visible;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: (@breakpointHD - 1px)) {
+
+  }
+  @media (max-width: @breakpointMenu) {
+
+  }
+  @media (max-width: (@ipadPort - 1px)) {
+
+  }
+}
+
+#floor_thumb_a.active:after {
+  display:none;
+  content:
+  url("../images/team/scenes/sprites/ct_00.png")
+  url("../images/team/scenes/sprites/ct_10.png")
+  url("../images/team/scenes/sprites/ct_20.png")
+  url("../images/team/scenes/sprites/el_10.png")
+  url("../images/team/scenes/sprites/fs_10.png")
+  url("../images/team/scenes/sprites/fs_20.png")
+  url("../images/team/scenes/sprites/fs_21.png")
+  url("../images/team/scenes/sprites/fs_22.png")
+  url("../images/team/scenes/sprites/fs_23.png")
+  url("../images/team/scenes/sprites/fs_24.png")
+  url("../images/team/scenes/sprites/fs_25.png")
+  url("../images/team/scenes/sprites/fs_26.png")
+  url("../images/team/scenes/sprites/fs_27.png")
+  url("../images/team/scenes/sprites/fs_28.png")
+  url("../images/team/scenes/sprites/fs_29.png")
+  url("../images/team/scenes/sprites/fs_29b.png")
+  url("../images/team/scenes/sprites/fs_29c.png")
+  url("../images/team/scenes/sprites/fs_30.png")
+  url("../images/team/scenes/sprites/fs_31.png")
+  url("../images/team/scenes/sprites/ss_10.png")
+  url("../images/team/scenes/sprites/ss_20.png")
+  url("../images/team/scenes/sprites/ss_21.png")
+  url("../images/team/scenes/sprites/ss_22.png")
+  url("../images/team/scenes/sprites/ss_23.png")
+  url("../images/team/scenes/sprites/ss_24.png")
+  url("../images/team/scenes/sprites/ss_25.png")
+  url("../images/team/scenes/sprites/ss_26.png")
+  url("../images/team/scenes/sprites/ss_27.png")
+  url("../images/team/scenes/sprites/ss_28.png")
+  url("../images/team/scenes/sprites/ss_29.png")
+  url("../images/team/scenes/sprites/ss_30.png")
+  url("../images/team/scenes/sprites/ss_31.png")
+  url("../images/team/scenes/sprites/ss_32.png");
+}
+#floor_thumb_b.active:after {
+  display:none;
+  content:
+  url("../images/team/scenes/sprites/bg_00.png")
+  url("../images/team/scenes/sprites/bg_10.png")
+  url("../images/team/scenes/sprites/bg_20.png")
+  url("../images/team/scenes/sprites/db_00.png")
+  url("../images/team/scenes/sprites/db_10.png")
+  url("../images/team/scenes/sprites/db_20.png")
+  url("../images/team/scenes/sprites/db_21.png")
+  url("../images/team/scenes/sprites/db_22.png")
+  url("../images/team/scenes/sprites/db_23.png")
+  url("../images/team/scenes/sprites/mm_00.png")
+  url("../images/team/scenes/sprites/mm_10.png")
+  url("../images/team/scenes/sprites/mm_20.png")
+  url("../images/team/scenes/sprites/mm_21.png")
+  url("../images/team/scenes/sprites/mm_22.png")
+  url("../images/team/scenes/sprites/mm_23.png")
+  url("../images/team/scenes/sprites/mm_24.png")
+  url("../images/team/scenes/sprites/mm_25.png")
+  url("../images/team/scenes/sprites/mm_26.png")
+  url("../images/team/scenes/sprites/mm_29.png")
+  url("../images/team/scenes/sprites/np_00.png")
+  url("../images/team/scenes/sprites/np_10.png")
+  url("../images/team/scenes/sprites/np_20.png")
+  url("../images/team/scenes/sprites/mh_00.png")
+  url("../images/team/scenes/sprites/mh_10.png")
+  url("../images/team/scenes/sprites/mh_20.png")
+  url("../images/team/scenes/sprites/mh_90.png")
+  url("../images/team/scenes/sprites/mh_91.png")
+  url("../images/team/scenes/sprites/mk_00.png")
+  url("../images/team/scenes/sprites/mk_10.png")
+  url("../images/team/scenes/sprites/mk_20.png")
+  url("../images/team/scenes/sprites/mj_00.png")
+  url("../images/team/scenes/sprites/mj_10.png")
+  url("../images/team/scenes/sprites/mj_20.png")
+  url("../images/team/scenes/sprites/mr_00.png")
+  url("../images/team/scenes/sprites/mr_10.png")
+  url("../images/team/scenes/sprites/mr_20.png")
+  url("../images/team/scenes/sprites/sa_00.png")
+  url("../images/team/scenes/sprites/sa_10.png")
+  url("../images/team/scenes/sprites/jo_00.png")
+  url("../images/team/scenes/sprites/jo_10.png")
+  url("../images/team/scenes/sprites/ak_00.png")
+  url("../images/team/scenes/sprites/ak_10.png")
+  url("../images/team/scenes/sprites/ak_20.png")
+  url("../images/team/scenes/sprites/ak_21.png")
+  url("../images/team/scenes/sprites/ak_22.png")
+  url("../images/team/scenes/sprites/ak_23.png")
+  url("../images/team/scenes/sprites/ak_24.png")
+  url("../images/team/scenes/sprites/ak_25.png")
+  url("../images/team/scenes/sprites/ak_26.png")
+  url("../images/team/scenes/sprites/ak_29.png")
+  url("../images/team/scenes/sprites/td_10.png")
+  url("../images/team/scenes/sprites/td_15.png")
+  url("../images/team/scenes/sprites/td_20.png")
+  url("../images/team/scenes/sprites/PaperPlane_25.png")
+  url("../images/team/scenes/sprites/PaperPlane_25b.png")
+  url("../images/team/scenes/sprites/PaperPlane_25c.png");
+}
+#floor_thumb_c.active:after {
+  display:none;
+  content:
+  url("../images/team/scenes/sprites/mha_00.png")
+  url("../images/team/scenes/sprites/mha_10.png")
+  url("../images/team/scenes/sprites/mha_20.png")
+  url("../images/team/scenes/sprites/mha_21.png")
+  url("../images/team/scenes/sprites/mha_22.png")
+  url("../images/team/scenes/sprites/mha_23.png")
+  url("../images/team/scenes/sprites/mha_24.png")
+  url("../images/team/scenes/sprites/mha_25.png")
+  url("../images/team/scenes/sprites/mha_26.png")
+  url("../images/team/scenes/sprites/mha_27.png")
+  url("../images/team/scenes/sprites/mha_28.png")
+  url("../images/team/scenes/sprites/mha_29.png")
+  url("../images/team/scenes/datacenter/01_Trockenbau.png")
+  url("../images/team/scenes/datacenter/02_Trockenbau.png")
+  url("../images/team/scenes/datacenter/03_Racks.png")
+  url("../images/team/scenes/datacenter/04_Racks.png")
+  url("../images/team/scenes/datacenter/05_Racks.png")
+  url("../images/team/scenes/datacenter/06_Trockenbau.png")
+  url("../images/team/scenes/datacenter/07_Racks.png")
+  url("../images/team/scenes/datacenter/08_Trockenbau.png")
+  url("../images/team/scenes/datacenter/09_Racks.png")
+  url("../images/team/scenes/datacenter/10_Racks.png")
+  url("../images/team/scenes/datacenter/11_Racks.png")
+  url("../images/team/scenes/datacenter_dark/01_Trockenbau_d.png")
+  url("../images/team/scenes/datacenter_dark/02_Trockenbau_d.png")
+  url("../images/team/scenes/datacenter_dark/03_Racks_d.png")
+  url("../images/team/scenes/datacenter_dark/04_Racks_d.png")
+  url("../images/team/scenes/datacenter_dark/05_Racks_d.png")
+  url("../images/team/scenes/datacenter_dark/06_Trockenbau_d.png")
+  url("../images/team/scenes/datacenter_dark/07_Racks_d.png")
+  url("../images/team/scenes/datacenter_dark/08_Trockenbau_d.png")
+  url("../images/team/scenes/datacenter_dark/09_Racks_d.png")
+  url("../images/team/scenes/datacenter_dark/10_Racks_d.png")
+  url("../images/team/scenes/datacenter_dark/11_Racks_d.png");
+}
